@@ -149,8 +149,19 @@ img {
 }
 
 .buttons button {
-  background-color: none;
+  background-color: transparent;
   border: 1px solid #666;
+  display: inline-block;
+  text-decoration: none;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border-radius: 3px;
   margin-top: 7%;
   width: 40%;
