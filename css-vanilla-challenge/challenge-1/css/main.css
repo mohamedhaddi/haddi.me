@@ -269,8 +269,8 @@ img {
     display: none;
   }
   .follows a img {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     margin-top: 5%;
   }
   .avatar img {
@@ -285,6 +285,17 @@ img {
 @media (max-width: 705px) {
   .avatar {
     margin-top: 10%;
+  }
+}
+
+@media (max-width: 580px) {
+  .follows a img {
+    width: 3.3em;
+    height: 3.3em;
+  }
+  .follows .arrow {
+    height: 2.5em;
+    margin-top: 20%;
   }
 }
 
