@@ -389,7 +389,7 @@ img {
 }
 
 /* Arrow's Wobble Horizontal Effect */
-@-webkit-keyframes arrow-wobble {
+@-webkit-keyframes hr-wobble {
   16.65% {
     -webkit-transform: translateX(8px);
     transform: translateX(8px);
@@ -416,7 +416,7 @@ img {
   }
 }
 
-@keyframes arrow-wobble {
+@keyframes hr-wobble {
   16.65% {
     -webkit-transform: translateX(8px);
     transform: translateX(8px);
@@ -452,9 +452,9 @@ img {
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-.arrow:hover, .arrow:focus, .arrow:active {
-  -webkit-animation-name: arrow-wobble;
-  animation-name: arrow-wobble;
+.arrow:hover, .arrow:focus, .arrow:active, .profile-card:hover, .profile-card:focus, .profile-card:active {
+  -webkit-animation-name: hr-wobble;
+  animation-name: hr-wobble;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-timing-function: ease-in-out;
@@ -464,7 +464,7 @@ img {
 }
 
 /* Wobble Vertical */
-@-webkit-keyframes avatar-wobble {
+@-webkit-keyframes vr-wobble {
   16.65% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
@@ -491,7 +491,7 @@ img {
   }
 }
 
-@keyframes avatar-wobble {
+@keyframes vr-wobble {
   16.65% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
@@ -528,8 +528,8 @@ img {
 }
 
 .follower-avatar:hover, .follower-avatar:focus, .follower-avatar:active {
-  -webkit-animation-name: avatar-wobble;
-  animation-name: avatar-wobble;
+  -webkit-animation-name: vr-wobble;
+  animation-name: vr-wobble;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-timing-function: ease-in-out;
