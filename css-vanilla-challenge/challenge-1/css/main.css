@@ -12,13 +12,6 @@ html, body {
   height: 90vh;
 }
 
-a {
-  text-decoration: none;
-  color: #406080;
-  font-size: 0.85em;
-  margin-bottom: .5em;
-}
-
 .profile-card {
   max-width: 840px;
   height: 100%;
@@ -112,8 +105,11 @@ img {
   border-radius: 4.6em;
 }
 
-.follows-n, .comments-n {
+.follows-n {
   padding-top: 8%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .name {
@@ -165,6 +161,7 @@ img {
   -moz-appearance: none;
   border-radius: 3px;
   margin-top: 7%;
+  margin-right: 2%;
   width: 40%;
   height: 40%;
   font-family: 'Roboto', sans-serif;
@@ -176,10 +173,6 @@ img {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.buttons .message {
-  margin-left: 2%;
-}
-
 .follows {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,6 +180,9 @@ img {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .follows img {
@@ -199,9 +195,12 @@ img {
 
 .follows a {
   margin: 3% 0 0 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
-.follows a img {
+.follows a .arrow {
   width: 3.5em;
 }
 
@@ -210,6 +209,13 @@ img {
 }*/
 .top-posts, .latest-posts, .last-received, .last-given {
   padding-right: 2%;
+}
+
+.top-posts a, .latest-posts a, .last-received a, .last-given a {
+  text-decoration: none;
+  color: #406080;
+  font-size: 0.85em;
+  margin-bottom: .5em;
 }
 
 .top-posts span, .top-posts a, .latest-posts span, .latest-posts a, .last-received span, .last-received a, .last-given span, .last-given a {
@@ -226,9 +232,12 @@ img {
   width: 2em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 860px) {
   .profile-card {
-    max-width: 600px;
+    width: 95vw;
+    padding: 0 5%;
+    -ms-grid-rows: 1fr 0.8fr 1fr 1fr;
+        grid-template-rows: 1fr 0.8fr 1fr 1fr;
   }
   h2 {
     font-size: 1em;
@@ -244,24 +253,25 @@ img {
   }
   .buttons button {
     height: 30%;
+    font-size: .7em;
   }
   .follows-n {
-    padding-top: 27%;
+    padding-top: 15%;
   }
   .follows {
-    padding-top: 5%;
+    padding-top: 0%;
   }
   .follows img {
     width: 4em;
     height: 4em;
   }
-  .follows img:nth-child(5) {
+  .follows a:nth-child(5) {
     display: none;
   }
   .follows a img {
     width: 3em;
     height: 3em;
-    margin-top: 15%;
+    margin-top: 5%;
   }
   .avatar img {
     margin-top: 10%;
@@ -272,10 +282,21 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 705px) {
+  .avatar {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 460px) {
+  .buttons button {
+    max-width: 6em;
+    margin-right: 1em;
+  }
   .profile-card {
-    max-width: 600px;
-    height: 500px;
+    max-width: 350px;
+    -ms-grid-rows: 1fr 0.75fr 1fr 1fr;
+        grid-template-rows: 1fr 0.75fr 1fr 1fr;
   }
   h2 {
     font-size: .7em;
@@ -304,29 +325,204 @@ img {
     width: 120%;
     height: 80%;
   }
-  .follows-n {
-    padding-top: 27%;
-  }
-  .follows {
-    padding-top: 5%;
-  }
   .follows img {
-    width: 3em;
-    height: 3em;
+    max-width: 3.5em;
+    max-height: 3.5em;
   }
-  .follows img:nth-child(4) {
+  .follows a:nth-child(4) {
     display: none;
   }
-  .follows a img {
-    width: 2em;
+  .follows .arrow {
     height: 2em;
-    margin-top: 40%;
-  }
-  .avatar img {
-    margin-top: 10%;
+    margin-top: 30%;
   }
   .top-posts a, .latest-posts a, .last-received a, .last-given a {
     span: .8em;
     font-size: .65em;
   }
+}
+
+@media (max-width: 360px) {
+  .name {
+    font-size: 1em;
+  }
+  .bio {
+    font-size: .6em;
+  }
+  .profile-card {
+    width: 95vw;
+    height: 80vh;
+    padding: 0 5%;
+    -ms-grid-rows: 0.6fr 0.6fr 1fr 1fr;
+        grid-template-rows: 0.6fr 0.6fr 1fr 1fr;
+  }
+  .buttons button {
+    font-size: .6em;
+    width: 6em;
+  }
+  h2 {
+    font-size: .6em;
+  }
+  div span {
+    font-size: .6em;
+  }
+  .follows img {
+    max-width: 2.5em;
+    max-height: 2.5em;
+    margin-bottom: 1em;
+  }
+  .follows .arrow {
+    height: 1.5em;
+    margin-top: 40%;
+  }
+}
+
+/* Arrow's Wobble Horizontal Effect */
+@-webkit-keyframes arrow-wobble {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes arrow-wobble {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.arrow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.arrow:hover, .arrow:focus, .arrow:active {
+  -webkit-animation-name: arrow-wobble;
+  animation-name: arrow-wobble;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Wobble Vertical */
+@-webkit-keyframes avatar-wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes avatar-wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.follower-avatar {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.follower-avatar:hover, .follower-avatar:focus, .follower-avatar:active {
+  -webkit-animation-name: avatar-wobble;
+  animation-name: avatar-wobble;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
