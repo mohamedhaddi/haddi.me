@@ -232,6 +232,12 @@ img {
   width: 2em;
 }
 
+@media (min-height: 620px) {
+  .profile-card {
+    height: 100%;
+  }
+}
+
 @media (max-width: 860px) {
   .profile-card {
     width: 95vw;
