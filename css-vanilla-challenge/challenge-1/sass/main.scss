@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	color: #202020;
+	font-family: 'Roboto', sans-serif;
+	height: 90vh;
+}
+
+.profile-card {;
+	max-width: 840px;
+	height: 100%;
+	background: rgb(255,255,255);
+	background: -moz-linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
+	background: -webkit-linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
+	background: linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
+	margin: 2% auto;
+	padding: 1% 3%;
+	display: grid;
+	grid-template-areas:
+		"avatar	info			buttons"
+		"f-n	profiles		profiles"
+		"p-n	p-top			p-latest"
+		"l-n	last-received 	last-given";
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr 2fr;
+	-webkit-box-shadow: 13px 34px 55px 0px rgba(0,0,0,0.08);
+	-moz-box-shadow: 13px 34px 55px 0px rgba(0,0,0,0.08);
+	box-shadow: 13px 34px 55px 0px rgba(0,0,0,0.08);
+	border-radius: 0.5em;
+}
+
+.avatar {
+	grid-area: avatar;
+}
+.info {
+	grid-area: info;
+}
+.buttons {
+	grid-area: buttons;
+}
+
+.follows-n {
+	grid-area: f-n;
+}
+.follows {
+	grid-area: profiles;
+}
+
+.posts-n {
+	grid-area: p-n;
+}
+.top-posts {
+	grid-area: p-top;
+}
+.latest-posts {
+	grid-area: p-latest;
+}
+
+.likes-n {
+	grid-area: l-n;
+}
+.last-received {
+	grid-area: last-received;
+}
+.last-given {
+	grid-area: last-given;
+}
+
+img {
+	display: block;
+	width: 95%;
+	margin: 4% 0 8% 0;
+	border-radius: 4.6em;
+	//border: 8px solid #EEEEEE;
+}
+
+.follows-n {
+	padding-top: 8%;
+	height: max-content;
+}
+
+.name {
+	font-size: 1.8em;
+}
+
+.info {
+	padding: 10% 10% 10% 12%;
+	position: relative;
+}
+
+#border-right {
+	width: 100%;
+	border-right: 0.1px solid #bbb;
+	position: absolute;
+	top: 24%;
+	bottom: 28%;
+	left: 3%;
+}
+
+.bio {
+	color: #888;
+	margin-top: 2%;
+}
+
+.buttons {
+	padding: 13% 5% 13% 3%;
+	display: flex;
+	justify-content: flex-end;
+	button {
+		background-color: transparent;
+		border: 1px solid #666;
+		display: inline-block;
+    text-decoration: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+		border-radius: 3px;
+		margin-top: 7%;
+		margin-right: 2%;
+		width: 40%;
+		height: 40%;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 400;
+		font-size: 0.8em;
+		&:hover {
+			background-color: rgba($color: #000000, $alpha: 0.1);
+		}
+	}
+}
+
+.follows {
+	display: flex;
+	justify-content: space-evenly;
+	height: max-content;
+	img {
+		margin: 2%;
+		display: inline-block;
+		width: 5em;
+		height: 5em;
+		border-radius: 100%;
+	}
+	a {
+		margin: 2% 0 0 0;
+		height: max-content;
+	}
+	a .arrow {
+		width: 3.5em;
+	}
+}
+
+/*.last-received, .last-given {
+	padding-top: 4%;
+}*/
+.top-posts, .latest-posts, .last-received, .last-given {
+	a {
+		text-decoration: none;
+		color: #406080;
+		font-size: 0.85em;
+		margin-bottom: .5em;
+	}
+	padding-right: 2%;
+	span, a {
+		display: block;
+	}
+	span {
+		margin-bottom: 5%;
+	}
+	img {
+		margin: 0;
+		color: #fff;
+		width: 2em;
+	}
+}
+
+@media(max-width:860px) {
+	.profile-card {
+		width: 95vw;
+		//max-width: 600px;
+		padding: 0 5%;
+		grid-template-rows: 1fr 0.8fr 1fr 1fr;
+	}
+	h2 {
+		font-size: 1em;
+	}
+	h1 {
+		font-size: 1.5em;
+	}
+	.name {
+		font-size: 1.3em;
+	}
+	.bio {
+		font-size: .8em;
+	}
+	.buttons {
+		button {
+			height: 30%;
+			font-size: .7em;
+		}
+	}
+	.follows-n {
+		padding-top: 15%;
+	}
+	.follows {
+		padding-top: 0%;
+		img {
+			width: 4em;
+			height: 4em;
+		}
+		a:nth-child(5) {
+			display: none;
+		}
+		a img {
+			width: 4em;
+			height: 4em;
+			margin-top: 5%;
+		}
+	}
+	.avatar img {
+		margin-top: 10%;
+	}
+	.top-posts, .latest-posts, .last-received, .last-given {
+		a {
+			span: .9em;
+			font-size: .75em;
+		}
+	}
+}
+
+@media(max-width:705px) {
+	.avatar {
+		margin-top: 10%;
+	}
+}
+
+@media(max-width:580px) {
+	.follows {
+		a img {
+			width: 3.3em;
+			height: 3.3em;
+		}
+		.arrow {
+			height: 2.5em;
+			margin-top: 20%;
+		}
+	}
+}
+
+@media(max-width:460px) {
+	.buttons button {
+		max-width: 6em;
+		margin-right: 1em;
+	}
+	.profile-card {
+		max-width: 350px;
+		grid-template-rows: 1fr 0.75fr 1fr 1fr;
+	}
+	h2 {
+		font-size: .7em;
+	}
+	h1 {
+		font-size: 1em;
+	}
+	.name {
+		font-size: 1em;
+	}
+	.bio {
+		font-size: .8em;
+	}
+	#border-right {
+		top: 15%;
+		bottom: 35%;
+	}
+	.buttons {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		height: 5em;
+		button {
+			width: 120%;
+			height: 80%;
+		}
+	}
+	.follows {
+		img {
+			max-width: 3.5em;
+			max-height: 3.5em;
+		}
+		a:nth-child(4) {
+			display: none;
+		}
+		.arrow {
+			height: 2em;
+			margin-top: 30%;
+		}
+	}
+	.top-posts, .latest-posts, .last-received, .last-given {
+		a {
+			span: .8em;
+			font-size: .65em;
+		}
+	}
+}
+
+@media(max-width:360px) {
+	.name {
+		font-size: 1em;
+	}
+	.bio {
+		font-size: .6em;
+	}
+	.profile-card {
+		width: 95vw;
+		height: 80vh;
+		padding: 0 5%;
+		grid-template-rows: 0.6fr 0.6fr 1fr 1fr;
+	}
+	.buttons button {
+		font-size: .6em;
+		width: 6em;
+	}
+	h2 {
+		font-size: .6em;
+	}
+	div span {
+		font-size: .6em;
+	}
+	.follows {
+		img {
+			max-width:2.5em;
+			max-height:2.5em;
+			margin-bottom: 1em;
+		}
+		.arrow {
+			height: 1.5em;
+			margin-top: 40%;
+		}
+	}
+}
+
+/* Arrow's Wobble Horizontal Effect */
+@-webkit-keyframes hr-wobble {
+	16.65% {
+	  -webkit-transform: translateX(8px);
+	  transform: translateX(8px);
+	}
+	33.3% {
+	  -webkit-transform: translateX(-6px);
+	  transform: translateX(-6px);
+	}
+	49.95% {
+	  -webkit-transform: translateX(4px);
+	  transform: translateX(4px);
+	}
+	66.6% {
+	  -webkit-transform: translateX(-2px);
+	  transform: translateX(-2px);
+	}
+	83.25% {
+	  -webkit-transform: translateX(1px);
+	  transform: translateX(1px);
+	}
+	100% {
+	  -webkit-transform: translateX(0);
+	  transform: translateX(0);
+	}
+  }
+  @keyframes hr-wobble {
+	16.65% {
+	  -webkit-transform: translateX(8px);
+	  transform: translateX(8px);
+	}
+	33.3% {
+	  -webkit-transform: translateX(-6px);
+	  transform: translateX(-6px);
+	}
+	49.95% {
+	  -webkit-transform: translateX(4px);
+	  transform: translateX(4px);
+	}
+	66.6% {
+	  -webkit-transform: translateX(-2px);
+	  transform: translateX(-2px);
+	}
+	83.25% {
+	  -webkit-transform: translateX(1px);
+	  transform: translateX(1px);
+	}
+	100% {
+	  -webkit-transform: translateX(0);
+	  transform: translateX(0);
+	}
+  }
+  .arrow {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .arrow:hover, .arrow:focus, .arrow:active, .profile-card:hover, .profile-card:focus, .profile-card:active {
+	-webkit-animation-name: hr-wobble;
+	animation-name: hr-wobble;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+  }
+
+  /* Wobble Vertical */
+@-webkit-keyframes vr-wobble {
+	16.65% {
+	  -webkit-transform: translateY(8px);
+	  transform: translateY(8px);
+	}
+	33.3% {
+	  -webkit-transform: translateY(-6px);
+	  transform: translateY(-6px);
+	}
+	49.95% {
+	  -webkit-transform: translateY(4px);
+	  transform: translateY(4px);
+	}
+	66.6% {
+	  -webkit-transform: translateY(-2px);
+	  transform: translateY(-2px);
+	}
+	83.25% {
+	  -webkit-transform: translateY(1px);
+	  transform: translateY(1px);
+	}
+	100% {
+	  -webkit-transform: translateY(0);
+	  transform: translateY(0);
+	}
+  }
+  @keyframes vr-wobble {
+	16.65% {
+	  -webkit-transform: translateY(8px);
+	  transform: translateY(8px);
+	}
+	33.3% {
+	  -webkit-transform: translateY(-6px);
+	  transform: translateY(-6px);
+	}
+	49.95% {
+	  -webkit-transform: translateY(4px);
+	  transform: translateY(4px);
+	}
+	66.6% {
+	  -webkit-transform: translateY(-2px);
+	  transform: translateY(-2px);
+	}
+	83.25% {
+	  -webkit-transform: translateY(1px);
+	  transform: translateY(1px);
+	}
+	100% {
+	  -webkit-transform: translateY(0);
+	  transform: translateY(0);
+	}
+  }
+  .follower-avatar {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .follower-avatar:hover, .follower-avatar:focus, .follower-avatar:active {
+	-webkit-animation-name: vr-wobble;
+	animation-name: vr-wobble;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+  }
