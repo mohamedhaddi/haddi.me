@@ -14,7 +14,7 @@ html,body {
 
 .profile-card {;
 	max-width: 840px;
-	height: 100%;
+	min-height: 100%;
 	background: rgb(255,255,255);
 	background: -moz-linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
 	background: -webkit-linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
@@ -180,6 +180,12 @@ img {
 		color: #fff;
 		width: 2em;
 	}
+}
+
+@media (min-height: 620px) {
+  .profile-card {
+    height: 100%;
+  }
 }
 
 @media(max-width:860px) {
