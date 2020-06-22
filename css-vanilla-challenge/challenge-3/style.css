@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT324&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+.wrapper {
+  display: flex;
+  width: 840px;
+  height: 840px;
+  background: #000 url(https://i.imgur.com/P5Sqj2D.png) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  margin: 25vh auto;
+  font-family: monospace;
+  justify-content: center;
+  align-items: center;
+}
+.slogan {
+  font-family: "VT323", monospace;
+  font-size: 3em;
+  position: relative;
+}
+.slogan::before {
+  width: 100%;
+  height: 100%;
+  content: "Future is Loading...";
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  background: black;
+  clip-path: inset(30% 0% 80% 0%);
+  animation: animate-red 3s infinite linear alternate;
+}
+.slogan::after {
+  width: 100%;
+  height: 100%;
+  content: "Future is Loading...";
+  position: absolute;
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  background: black;
+  clip-path: inset(30% 0% 30% 0%);
+  animation: animate-blue 3s infinite linear alternate-reverse;
+}
+@keyframes animate-red {
+  0% {
+    clip-path: inset(48% 0 40% 0);
+  }
+  5% {
+    clip-path: inset(53% 0 37% 0);
+  }
+  10% {
+    clip-path: inset(66% 0 34% 0);
+  }
+  15% {
+    clip-path: inset(12% 0 74% 0);
+  }
+  20% {
+    clip-path: inset(79% 0 13% 0);
+  }
+  25% {
+    clip-path: inset(27% 0 62% 0);
+  }
+  30% {
+    clip-path: inset(31% 0 43% 0);
+  }
+  35% {
+    clip-path: inset(79% 0 1% 0);
+  }
+  40% {
+    clip-path: inset(62% 0 27% 0);
+  }
+  45% {
+    clip-path: inset(19% 0 67% 0);
+  }
+  50% {
+    clip-path: inset(10% 0 26% 0);
+    content: "1337";
+    font-family: "Press Start 2P", monospace;
+    clip-path: inset(10% 50% 26% 0);
+  }
+  55% {
+    clip-path: inset(32% 0 27% 0);
+  }
+  60% {
+    clip-path: inset(61% 0 20% 0);
+  }
+  65% {
+    clip-path: inset(68% 0 19% 0);
+  }
+  70% {
+    clip-path: inset(89% 0 4% 0);
+  }
+  75% {
+    clip-path: inset(37% 0 60% 0);
+  }
+  80% {
+    clip-path: inset(6% 0 65% 0);
+  }
+  85% {
+    clip-path: inset(44% 0 49% 0);
+  }
+  90% {
+    clip-path: inset(93% 0 5% 0);
+  }
+  95% {
+    clip-path: inset(2% 0 18% 0);
+  }
+  100% {
+    clip-path: inset(42% 0 9% 0);
+  }
+}
+@keyframes animate-blue {
+  0% {
+    clip-path: inset(18% 0 78% 0);
+  }
+  5% {
+    clip-path: inset(89% 0 7% 0);
+  }
+  10% {
+    clip-path: inset(61% 0 1% 0);
+  }
+  15% {
+    clip-path: inset(87% 0 11% 0);
+  }
+  20% {
+    clip-path: inset(19% 0 4% 0);
+  }
+  25% {
+    clip-path: inset(49% 0 3% 0);
+  }
+  30% {
+    clip-path: inset(39% 0 33% 0);
+  }
+  35% {
+    clip-path: inset(23% 0 64% 0);
+  }
+  40% {
+    clip-path: inset(48% 0 1% 0);
+  }
+  45% {
+    clip-path: inset(26% 0 66% 0);
+  }
+  50% {
+    clip-path: inset(70% 0 8% 0);
+    content: "1337";
+    font-family: "Press Start 2P", monospace;
+    clip-path: inset(70% 50% 8% 0);
+  }
+  55% {
+    clip-path: inset(52% 0 46% 0);
+  }
+  60% {
+    clip-path: inset(61% 0 16% 0);
+  }
+  65% {
+    clip-path: inset(4% 0 12% 0);
+  }
+  70% {
+    clip-path: inset(88% 0 7% 0);
+  }
+  75% {
+    clip-path: inset(16% 0 62% 0);
+  }
+  80% {
+    clip-path: inset(74% 0 5% 0);
+  }
+  85% {
+    clip-path: inset(23% 0 20% 0);
+  }
+  90% {
+    clip-path: inset(11% 0 33% 0);
+  }
+  95% {
+    clip-path: inset(54% 0 31% 0);
+  }
+  100% {
+    clip-path: inset(84% 0 2% 0);
+  }
+}
+@media (max-width: 840px) {
+  .warpper {
+    width: 100%;
+  }
+  .slogan {
+    font-size: 3em;
+  }
+}
+@media (max-width: 660px) {
+  .warpper {
+    width: 100%;
+  }
+  .slogan {
+    font-size: 2em;
+  }
+}
+@media (max-width: 440px) {
+  .warpper {
+    width: 100%;
+  }
+  .slogan {
+    font-size: 1em;
+  }
+}
+@media (max-width: 300px) {
+  .warpper {
+    width: 100%;
+  }
+  .slogan {
+    font-size: .5em;
+  }
+}
+@media (max-height: 840px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    margin: 0;
+    height: 100vh;
+  }
+}
