@@ -12,7 +12,7 @@ html,body {
 	height: 90vh;
 }
 
-.profile-card {;
+.profile-card {
 	max-width: 840px;
 	height: 100%;
 	background: rgb(255,255,255);
@@ -23,10 +23,10 @@ html,body {
 	padding: 1% 3%;
 	display: grid;
 	grid-template-areas:
-		"avatar	info			buttons"
-		"f-n	profiles		profiles"
-		"p-n	p-top			p-latest"
-		"l-n	last-received 	last-given";
+	"avatar	info			buttons"
+	"f-n	profiles		profiles"
+	"p-n	p-top			p-latest"
+	"l-n	last-received 	last-given";
 	grid-template-rows: 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 2fr 2fr;
 	-webkit-box-shadow: 13px 34px 55px 0px rgba(0,0,0,0.08);
@@ -116,14 +116,14 @@ img {
 		background-color: transparent;
 		border: 1px solid #666;
 		display: inline-block;
-    text-decoration: none;
-    font-family: sans-serif;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out,
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+		text-decoration: none;
+		font-family: sans-serif;
+		cursor: pointer;
+		text-align: center;
+		transition: background 250ms ease-in-out,
+		transform 150ms ease;
+		-webkit-appearance: none;
+		-moz-appearance: none;
 		border-radius: 3px;
 		margin-top: 7%;
 		margin-right: 2%;
@@ -349,64 +349,64 @@ img {
 /* Arrow's Wobble Horizontal Effect */
 @-webkit-keyframes hr-wobble {
 	16.65% {
-	  -webkit-transform: translateX(8px);
-	  transform: translateX(8px);
+		-webkit-transform: translateX(8px);
+		transform: translateX(8px);
 	}
 	33.3% {
-	  -webkit-transform: translateX(-6px);
-	  transform: translateX(-6px);
+		-webkit-transform: translateX(-6px);
+		transform: translateX(-6px);
 	}
 	49.95% {
-	  -webkit-transform: translateX(4px);
-	  transform: translateX(4px);
+		-webkit-transform: translateX(4px);
+		transform: translateX(4px);
 	}
 	66.6% {
-	  -webkit-transform: translateX(-2px);
-	  transform: translateX(-2px);
+		-webkit-transform: translateX(-2px);
+		transform: translateX(-2px);
 	}
 	83.25% {
-	  -webkit-transform: translateX(1px);
-	  transform: translateX(1px);
+		-webkit-transform: translateX(1px);
+		transform: translateX(1px);
 	}
 	100% {
-	  -webkit-transform: translateX(0);
-	  transform: translateX(0);
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
 	}
-  }
-  @keyframes hr-wobble {
+}
+@keyframes hr-wobble {
 	16.65% {
-	  -webkit-transform: translateX(8px);
-	  transform: translateX(8px);
+		-webkit-transform: translateX(8px);
+		transform: translateX(8px);
 	}
 	33.3% {
-	  -webkit-transform: translateX(-6px);
-	  transform: translateX(-6px);
+		-webkit-transform: translateX(-6px);
+		transform: translateX(-6px);
 	}
 	49.95% {
-	  -webkit-transform: translateX(4px);
-	  transform: translateX(4px);
+		-webkit-transform: translateX(4px);
+		transform: translateX(4px);
 	}
 	66.6% {
-	  -webkit-transform: translateX(-2px);
-	  transform: translateX(-2px);
+		-webkit-transform: translateX(-2px);
+		transform: translateX(-2px);
 	}
 	83.25% {
-	  -webkit-transform: translateX(1px);
-	  transform: translateX(1px);
+		-webkit-transform: translateX(1px);
+		transform: translateX(1px);
 	}
 	100% {
-	  -webkit-transform: translateX(0);
-	  transform: translateX(0);
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
 	}
-  }
-  .arrow {
+}
+.arrow {
 	display: inline-block;
 	vertical-align: middle;
 	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  }
-  .arrow:hover, .arrow:focus, .arrow:active, .profile-card:hover, .profile-card:focus, .profile-card:active {
+}
+.arrow:hover, .arrow:focus, .arrow:active, .profile-card:hover, .profile-card:focus, .profile-card:active {
 	-webkit-animation-name: hr-wobble;
 	animation-name: hr-wobble;
 	-webkit-animation-duration: 1s;
@@ -415,69 +415,69 @@ img {
 	animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 	animation-iteration-count: 1;
-  }
+}
 
-  /* Wobble Vertical */
+/* Wobble Vertical */
 @-webkit-keyframes vr-wobble {
 	16.65% {
-	  -webkit-transform: translateY(8px);
-	  transform: translateY(8px);
+		-webkit-transform: translateY(8px);
+		transform: translateY(8px);
 	}
 	33.3% {
-	  -webkit-transform: translateY(-6px);
-	  transform: translateY(-6px);
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
 	}
 	49.95% {
-	  -webkit-transform: translateY(4px);
-	  transform: translateY(4px);
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px);
 	}
 	66.6% {
-	  -webkit-transform: translateY(-2px);
-	  transform: translateY(-2px);
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
 	}
 	83.25% {
-	  -webkit-transform: translateY(1px);
-	  transform: translateY(1px);
+		-webkit-transform: translateY(1px);
+		transform: translateY(1px);
 	}
 	100% {
-	  -webkit-transform: translateY(0);
-	  transform: translateY(0);
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
 	}
-  }
-  @keyframes vr-wobble {
+}
+@keyframes vr-wobble {
 	16.65% {
-	  -webkit-transform: translateY(8px);
-	  transform: translateY(8px);
+		-webkit-transform: translateY(8px);
+		transform: translateY(8px);
 	}
 	33.3% {
-	  -webkit-transform: translateY(-6px);
-	  transform: translateY(-6px);
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
 	}
 	49.95% {
-	  -webkit-transform: translateY(4px);
-	  transform: translateY(4px);
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px);
 	}
 	66.6% {
-	  -webkit-transform: translateY(-2px);
-	  transform: translateY(-2px);
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
 	}
 	83.25% {
-	  -webkit-transform: translateY(1px);
-	  transform: translateY(1px);
+		-webkit-transform: translateY(1px);
+		transform: translateY(1px);
 	}
 	100% {
-	  -webkit-transform: translateY(0);
-	  transform: translateY(0);
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
 	}
-  }
-  .follower-avatar {
+}
+.follower-avatar {
 	display: inline-block;
 	vertical-align: middle;
 	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  }
-  .follower-avatar:hover, .follower-avatar:focus, .follower-avatar:active {
+}
+.follower-avatar:hover, .follower-avatar:focus, .follower-avatar:active {
 	-webkit-animation-name: vr-wobble;
 	animation-name: vr-wobble;
 	-webkit-animation-duration: 1s;
@@ -486,4 +486,4 @@ img {
 	animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 	animation-iteration-count: 1;
-  }
+}
