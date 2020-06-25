@@ -7,8 +7,23 @@
 }
 
 a {
-    color: #fff;
+    color: #202040;
     text-decoration: none;
+}
+
+@keyframes quick-highlight {
+    0% {
+        color: #4400bb;
+        text-shadow: 0.2em 0em white;
+    }
+    100% {
+        color: #202040;
+        text-shadow: 0em 0em white;
+    }
+}
+
+#logo:target {
+    animation: quick-highlight 0.5s;
 }
 
 ul {
@@ -74,4 +89,5 @@ p {
     font-family: "Alata", sans-serif;
     color: #555588;
     font-size: 0.85em;
+    margin-bottom: 1.4vh;
 }
