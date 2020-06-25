@@ -37,7 +37,7 @@ body {
         display: inline-block;
         transform: rotate(180deg);
         position: absolute;
-        left: 3em;
+        //left: 3em;
         bottom: -0.13em;
         transition: transform 0.5s, left 0.5s, bottom 0.5s;
     }
@@ -50,7 +50,7 @@ body {
     #me {
         display: inline-block;
         position: absolute;
-        left: 3.38em;
+        left: 3.3em;
         transition: transform 0.5s, left 0.5s, opacity 0.5s;
     }
 }
@@ -59,7 +59,7 @@ body {
     #i {
         transform: rotate(0deg);
         bottom: 0em;
-        left: 2.974em;
+        //left: 2.974em;
         transition: transform 0.5s, left 0.5s, bottom 0.5s;
     }
     #me {
