@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Candal&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #c0cfff;
+}
+
+#wrapper {
+  max-width: 1024px;
+  padding: 0 4.4vw 0 4.4vw;
+  margin: 3vw auto 0;
+}
+
+#logo {
+  outline: none;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1.5em;
+  font-family: "Candal", sans-serif;
+  color: #202040;
+  position: relative;
+}
+#logo #i {
+  display: inline-block;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 3em;
+  bottom: -0.13em;
+  transition: transform 0.5s, left 0.5s, bottom 0.5s;
+}
+#logo #dot {
+  display: inline-block;
+  opacity: 0%;
+  width: 0;
+  height: 0;
+}
+#logo #me {
+  display: inline-block;
+  position: absolute;
+  left: 3.38em;
+  transition: transform 0.5s, left 0.5s, opacity 0.5s;
+}
+
+#logo:hover #i {
+  transform: rotate(0deg);
+  bottom: 0em;
+  left: 2.974em;
+  transition: transform 0.5s, left 0.5s, bottom 0.5s;
+}
+#logo:hover #me {
+  transform: rotate(30deg);
+  left: 4em;
+  opacity: 0%;
+  transition: transform 0.5s, left 0.5s, opacity 0.5s;
+}
+
+/*# sourceMappingURL=style.css.map */

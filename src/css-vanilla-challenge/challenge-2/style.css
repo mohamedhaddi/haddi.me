@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,695;0,900;1,400;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+}
+html,
+body {
+  background: #ddd
+  url(https://itstheyoos.files.wordpress.com/2018/07/the-coffee-pot-1.jpg)no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+.quote-card {
+  position: relative;
+  margin: auto;
+  max-width: 840px;
+  height: 100%;
+  background-color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+  -webkit-clip-path: polygon(
+    1% 18%,
+    0 9%,
+    1% 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    1% 88%,
+    0 75%,
+    2% 61%,
+    1% 48%,
+    2% 38%,
+    1% 28%
+  );
+  clip-path: polygon(
+    1% 18%,
+    0 9%,
+    1% 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    1% 88%,
+    0 75%,
+    2% 61%,
+    1% 48%,
+    2% 38%,
+    1% 28%
+  );
+}
+img {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: slide-in-left 2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s both;
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.quote-container {
+  animation: slide-in-right 2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s both;
+}
+.quote {
+  color: #222;
+  font-style: italic;
+  font-size: 2.5em;
+  text-justify: auto;
+  width: 69%;
+  padding: 5% 0 0 7%;
+  animation: make-font-thicc 2s forwards;
+  animation-delay: 1s;
+  transition: font-weight 0.45s ease-out,
+    all 1s cubic-bezier(0.39, 0.575, 0.28, 0.995);
+  letter-spacing: 1px;
+}
+.quote:hover {
+  font-weight: 400;
+  animation: make-font-thin 1s forwards;
+  letter-spacing: 0px;
+}
+.highlight {
+  background: linear-gradient(#800000, #d00000) left no-repeat, rgba(0, 0, 0, 0);
+  background-size: 0% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: animate-highlight 5s forwards linear;
+  transition: font-weight 0.45s ease-out,
+    all 1s cubic-bezier(0.39, 0.575, 0.28, 0.995);
+}
+.highlight:hover {
+  font-style: normal;
+  letter-spacing: 2px;
+}
+.author {
+  color: #222;
+  font-variation-settings: "wght" 100;
+  font-size: 1.8em;
+  margin: 7% 0 0 7%;
+}
+@keyframes make-font-thicc {
+  from {
+    font-variation-settings: "wght" 400;
+  }
+  to {
+    font-variation-settings: "wght" 800;
+  }
+}
+@keyframes make-font-thin {
+  from {
+    font-variation-settings: "wght" 800;
+  }
+  to {
+    font-variation-settings: "wght" 400;
+  }
+}
+@keyframes animate-highlight {
+  100% {
+    background-size: 100% 100%;
+  }
+}
+@media (max-width: 730px) {
+  img {
+    height: 90%;
+  }
+  .quote {
+    font-size: 2.3em;
+    width: 60%;
+  }
+  .author {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 600px) {
+  img {
+    height: 75%;
+  }
+  .quote {
+    font-size: 2em;
+    width: 65%;
+  }
+  .author {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 480px) {
+  img {
+    height: 50%;
+  }
+  .quote {
+    font-size: 2.2em;
+    width: 80%;
+  }
+  .author {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 360px) {
+  img {
+    height: 45%;
+  }
+  .quote {
+    font-size: 1.9em;
+    width: 60%;
+  }
+  .author {
+    font-size: 1em;
+  }
+}
+@media (max-width: 300px) {
+  .quote:not(.hightlight) {
+    width: 80%;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+  }
+  img {
+    height: 40%;
+  }
+}
+@media (min-width: 730px) {
+  img {
+    height: 88%;
+  }
+  .quote {
+    font-size: 2.9em;
+    width: 73%;
+  }
+  .author {
+    font-size: 2em;
+  }
+}
+@media (min-height: 840px) {
+  .quote-card {
+    max-height: 840px;
+  }
+}
+@media (max-height: 440px) {
+  .quote {
+    width: 80%;
+    font-size: 2em;
+  }
+  .author {
+    font-size: 1.5em;
+  }
+}
+@media (max-height: 380px) {
+  .quote {
+    width: 80%;
+    font-size: 1.7em;
+  }
+  .author {
+    margin-top: 2.5%;
+    font-size: 1.2em;
+  }
+}
