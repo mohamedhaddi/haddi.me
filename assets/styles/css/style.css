@@ -63,4 +63,14 @@ body {
   transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
 }
 
+main {
+  margin-top: 6vh;
+}
+
+p {
+  font-family: "Alata", sans-serif;
+  color: #555588;
+  font-size: 0.85em;
+}
+
 /*# sourceMappingURL=style.css.map */
