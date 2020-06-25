@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Candal&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #c0cfff;
+}
+
+#wrapper {
+  max-width: 1024px;
+  padding: 0 4.4vw 0 4.4vw;
+  margin: 3vw auto 0;
+}
+
+#logo {
+  outline: none;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1.5em;
+  font-family: "Candal", sans-serif;
+  color: #202040;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#logo #hadd {
+  display: inline-block;
+}
+#logo #i {
+  display: inline-block;
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: -0.13em;
+  transition: transform 0.5s, left 0.5s, bottom 0.5s;
+}
+#logo #me {
+  white-space: pre;
+  display: inline-block;
+  margin-left: 0;
+  position: absolute;
+  transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
+}
+
+#logo:hover #i {
+  transform: rotate(0deg);
+  bottom: 0em;
+  transition: transform 0.5s, bottom 0.5s;
+}
+#logo:hover #me {
+  transform: rotate(30deg);
+  margin-left: 1em;
+  opacity: 0%;
+  transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvbWFpbi5zY3NzIiwic3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFRLHdGQUFBO0FBRVI7RUFDSSxzQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0FDQUo7O0FER0E7RUFDSSxXQUFBO0VBQ0EscUJBQUE7QUNBSjs7QURHQTtFQUNJLGdCQUFBO0FDQUo7O0FER0E7RUFDSSx5QkFBQTtBQ0FKOztBREdBO0VBQ0ksaUJBQUE7RUFDQSx3QkFBQTtFQUNBLGtCQUFBO0FDQUo7O0FER0E7RUFDSSxhQUFBO0VBQ0EscUJBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUNBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtLQUFBLHNCQUFBO01BQUEscUJBQUE7VUFBQSxpQkFBQTtBQ0FKO0FEQ0k7RUFDSSxxQkFBQTtBQ0NSO0FEQ0k7RUFDSSxxQkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0Esa0RBQUE7QUNDUjtBRENJO0VBQ0ksZ0JBQUE7RUFDQSxxQkFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLDBEQUFBO0FDQ1I7O0FESUk7RUFDSSx1QkFBQTtFQUNBLFdBQUE7RUFDQSx1Q0FBQTtBQ0RSO0FER0k7RUFDSSx3QkFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLDBEQUFBO0FDRFIiLCJmaWxlIjoibWFpbi5jc3MifQ== */
