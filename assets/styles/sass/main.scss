@@ -33,25 +33,23 @@ body {
     font-family: "Candal", sans-serif;
     color: #202040;
     position: relative;
+    user-select: none;
+    #hadd {
+        display: inline-block;
+    }
     #i {
         display: inline-block;
         transform: rotate(180deg);
         position: absolute;
-        //left: 3em;
         bottom: -0.13em;
         transition: transform 0.5s, left 0.5s, bottom 0.5s;
     }
-    #dot {
-        display: inline-block;
-        opacity: 0%;
-        width: 0;
-        height: 0;
-    }
     #me {
+        white-space: pre;
         display: inline-block;
+        margin-left: 0;
         position: absolute;
-        left: 3.3em;
-        transition: transform 0.5s, left 0.5s, opacity 0.5s;
+        transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
     }
 }
 
@@ -59,13 +57,12 @@ body {
     #i {
         transform: rotate(0deg);
         bottom: 0em;
-        //left: 2.974em;
-        transition: transform 0.5s, left 0.5s, bottom 0.5s;
+        transition: transform 0.5s, bottom 0.5s;
     }
     #me {
         transform: rotate(30deg);
-        left: 4em;
+        margin-left: 1em;
         opacity: 0%;
-        transition: transform 0.5s, left 0.5s, opacity 0.5s;
+        transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
     }
 }
