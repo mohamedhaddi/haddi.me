@@ -10,7 +10,7 @@ logoElement.addEventListener("click", (event) => {
     event.preventDefault();
     setTimeout(function () {
         window.location.href = ".";
-    }, 500);
+    }, 700);
 });
 
 /* copying the intended text instead of the default
