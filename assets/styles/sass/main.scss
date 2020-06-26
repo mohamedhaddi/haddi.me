@@ -7,8 +7,13 @@
 }
 
 a {
+    outline: none;
     color: #202040;
     text-decoration: none;
+}
+
+a:active {
+    color: #101020;
 }
 
 @keyframes quick-highlight {
