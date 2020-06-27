@@ -60,7 +60,7 @@ body {
   transform: rotate(180deg);
   position: absolute;
   bottom: -0.13em;
-  transition: transform 0.5s, left 0.5s, bottom 0.5s;
+  transition: transform 0.5s, bottom 0.5s;
 }
 #logo #me {
   white-space: pre;
