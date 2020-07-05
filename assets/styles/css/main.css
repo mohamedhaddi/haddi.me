@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Candal&display=swap");
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -72,29 +73,51 @@ body {
 }
 #logo #i {
   display: inline-block;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
   position: absolute;
   bottom: -0.13em;
+  -webkit-transition: bottom 0.5s, -webkit-transform 0.5s;
+  transition: bottom 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, bottom 0.5s;
   transition: transform 0.5s, bottom 0.5s;
+  transition: transform 0.5s, bottom 0.5s, -webkit-transform 0.5s;
 }
 #logo #me {
   white-space: pre;
   display: inline-block;
   margin-left: 0;
   position: absolute;
+  -webkit-transition: margin-left 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  transition: margin-left 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
   transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
+  transition: transform 0.5s, margin-left 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 #logo:hover #i {
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
   bottom: 0em;
+  -webkit-transition: bottom 0.5s, -webkit-transform 0.5s;
+  transition: bottom 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, bottom 0.5s;
   transition: transform 0.5s, bottom 0.5s;
+  transition: transform 0.5s, bottom 0.5s, -webkit-transform 0.5s;
 }
 #logo:hover #me {
-  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
   margin-left: 1em;
   opacity: 0%;
+  -webkit-transition: margin-left 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  transition: margin-left 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
   transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
+  transition: transform 0.5s, margin-left 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 main {
@@ -108,4 +131,4 @@ p {
   margin-bottom: 1.4vh;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvbWFpbi5zY3NzIiwic3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFRLHdGQUFBO0FBRVI7RUFDSSxzQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0FDQUo7O0FER0E7RUFDSSxhQUFBO0VBQ0EsY0FBQTtFQUNBLHFCQUFBO0FDQUo7O0FER0E7RUFDSSxjQUFBO0FDQUo7O0FER0E7RUFDSTtJQUNJLGNBQUE7SUFDQSw0QkFBQTtFQ0FOO0VERUU7SUFDSSxjQUFBO0lBQ0EsMEJBQUE7RUNBTjtBQUNGOztBRFJBO0VBQ0k7SUFDSSxjQUFBO0lBQ0EsNEJBQUE7RUNBTjtFREVFO0lBQ0ksY0FBQTtJQUNBLDBCQUFBO0VDQU47QUFDRjtBREdBO0VBQ0ksdUNBQUE7VUFBQSwrQkFBQTtBQ0RKOztBRElBO0VBQ0ksZ0JBQUE7QUNESjs7QURJQTtFQUNJLHlCQUFBO0FDREo7O0FESUE7RUFDSSxpQkFBQTtFQUNBLHdCQUFBO0VBQ0Esa0JBQUE7QUNESjs7QURJQTtFQUNJLGFBQUE7RUFDQSxxQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUNBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtLQUFBLHNCQUFBO01BQUEscUJBQUE7VUFBQSxpQkFBQTtBQ0RKO0FERUk7RUFDSSxxQkFBQTtBQ0FSO0FERUk7RUFDSSxxQkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0EsdUNBQUE7QUNBUjtBREVJO0VBQ0ksZ0JBQUE7RUFDQSxxQkFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLDBEQUFBO0FDQVI7O0FES0k7RUFDSSx1QkFBQTtFQUNBLFdBQUE7RUFDQSx1Q0FBQTtBQ0ZSO0FESUk7RUFDSSx3QkFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLDBEQUFBO0FDRlI7O0FETUE7RUFDSSxlQUFBO0FDSEo7O0FETUE7RUFDSSxnQ0FBQTtFQUNBLGNBQUE7RUFDQSxpQkFBQTtFQUNBLG9CQUFBO0FDSEoiLCJmaWxlIjoibWFpbi5jc3MifQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvbWFpbi5zY3NzIiwic3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFRLHdGQUFBO0FBRVI7RUFDSSw4QkFBQTtVQUFBLHNCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUNBSjs7QURHQTtFQUNJLGFBQUE7RUFDQSxjQUFBO0VBQ0EscUJBQUE7QUNBSjs7QURHQTtFQUNJLGNBQUE7QUNBSjs7QURHQTtFQUNJO0lBQ0ksY0FBQTtJQUNBLDRCQUFBO0VDQU47RURFRTtJQUNJLGNBQUE7SUFDQSwwQkFBQTtFQ0FOO0FBQ0Y7O0FEUkE7RUFDSTtJQUNJLGNBQUE7SUFDQSw0QkFBQTtFQ0FOO0VERUU7SUFDSSxjQUFBO0lBQ0EsMEJBQUE7RUNBTjtBQUNGO0FER0E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0FDREo7O0FESUE7RUFDSSxnQkFBQTtBQ0RKOztBRElBO0VBQ0kseUJBQUE7QUNESjs7QURJQTtFQUNJLGlCQUFBO0VBQ0Esd0JBQUE7RUFDQSxrQkFBQTtBQ0RKOztBRElBO0VBQ0ksYUFBQTtFQUNBLHFCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQ0FBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLHlCQUFBO0tBQUEsc0JBQUE7TUFBQSxxQkFBQTtVQUFBLGlCQUFBO0FDREo7QURFSTtFQUNJLHFCQUFBO0FDQVI7QURFSTtFQUNJLHFCQUFBO0VBQ0EsaUNBQUE7TUFBQSw2QkFBQTtVQUFBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0EsdURBQUE7RUFBQSwrQ0FBQTtFQUFBLDBDQUFBO0VBQUEsdUNBQUE7RUFBQSwrREFBQTtBQ0FSO0FERUk7RUFDSSxnQkFBQTtFQUNBLHFCQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsMEVBQUE7RUFBQSxrRUFBQTtFQUFBLDZEQUFBO0VBQUEsMERBQUE7RUFBQSxrRkFBQTtBQ0FSOztBREtJO0VBQ0ksK0JBQUE7TUFBQSwyQkFBQTtVQUFBLHVCQUFBO0VBQ0EsV0FBQTtFQUNBLHVEQUFBO0VBQUEsK0NBQUE7RUFBQSwwQ0FBQTtFQUFBLHVDQUFBO0VBQUEsK0RBQUE7QUNGUjtBRElJO0VBQ0ksZ0NBQUE7TUFBQSw0QkFBQTtVQUFBLHdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxXQUFBO0VBQ0EsMEVBQUE7RUFBQSxrRUFBQTtFQUFBLDZEQUFBO0VBQUEsMERBQUE7RUFBQSxrRkFBQTtBQ0ZSOztBRE1BO0VBQ0ksZUFBQTtBQ0hKOztBRE1BO0VBQ0ksZ0NBQUE7RUFDQSxjQUFBO0VBQ0EsaUJBQUE7RUFDQSxvQkFBQTtBQ0hKIiwiZmlsZSI6Im1haW4uY3NzIn0= */
