@@ -46,6 +46,7 @@ body {
 }
 
 #logo {
+    width: 15%;
     outline: none;
     display: inline-block;
     font-size: 1.5em;
@@ -87,7 +88,7 @@ body {
 }
 
 main {
-    margin-top: 6vh;
+    margin-top: 11.5vh;
 }
 
 p {
@@ -96,3 +97,37 @@ p {
     font-size: 0.85em;
     margin-bottom: 1.4vh;
 }
+
+.container {
+    font-family: "Alata", sans-serif;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / auto auto auto;
+    grid-column-gap: 3vw;
+    grid-row-gap: 8vh;
+    justify-items: center;
+    @for $i from 1 through 9 {
+        div:nth-child(#{$i}) {
+            //background: rgba(random(255), random(255), random(255), 0.3);
+            text-align: center;
+            color: #202040;
+            opacity: 0.99;
+            max-width: 11vw;
+            h2 {
+                text-transform: lowercase;
+                font-size: 1.5em;
+                margin-bottom: 0.2em;
+            }
+            span {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-underline-offset: 0.15em;
+                margin: auto 0.2em;
+                font-size: 0.9em;
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
