@@ -1,4 +1,5 @@
 let logoElement = document.querySelector("#logo");
+let toggleElement = document.querySelector("#toggle");
 
 /* delaying the logo's hyperlink target (homepage)
  * until after hover's transition effect, to fix the
@@ -21,3 +22,18 @@ logoElement.addEventListener("copy", (event) => {
     event.preventDefault();
     event.clipboardData.setData("text", "haddi.me");
 });
+
+function isChecked(toggleElement) {
+    var a = document.getElementsByTagName("a");
+    document.body.style.backgroundColor = toggleElement.checked
+        ? "#c0cfff"
+        : "#202040";
+    logoElement.style.color = toggleElement.checked ? "#202040" : "#c0cfff";
+    document.querySelector(".container").style.color = toggleElement.checked
+        ? "#202040"
+        : "#c0cfff";
+    for (var i = 0; i < a.length; i++) {
+        a[i].style.color = toggleElement.checked ? "#202040" : "#c0cfff";
+    }
+}
+

@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Candal&display=swap");
+$darkblue: #202040;
+$darkerblue: #101020;
+$lightblue: #c0cfff;
+$kindagrey: #555588;
 
 * {
     box-sizing: border-box;
@@ -8,12 +12,12 @@
 
 a {
     outline: none;
-    color: #202040;
+    color: $lightblue;
     text-decoration: none;
 }
 
 a:active {
-    color: #101020;
+    color: lighten($lightblue, 50%);
 }
 
 @keyframes quick-highlight {
@@ -22,7 +26,7 @@ a:active {
         text-shadow: 0.2em 0em white;
     }
     100% {
-        color: #202040;
+        color: $lightblue;
         text-shadow: 0em 0em white;
     }
 }
@@ -36,13 +40,19 @@ ul {
 }
 
 body {
-    background-color: #c0cfff;
+    background-color: $darkblue;
+    transition: background-color 1s;
+    min-height: 90vh;
 }
 
 #wrapper {
     max-width: 1024px;
+    min-height: 90vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     padding: 0 4.4vw 0 4.4vw;
     margin: 3vw auto 0;
+    position: relative;
 }
 
 #logo {
@@ -51,7 +61,7 @@ body {
     display: inline-block;
     font-size: 1.5em;
     font-family: "Candal", sans-serif;
-    color: #202040;
+    color: $lightblue;
     position: relative;
     user-select: none;
     #hadd {
@@ -87,47 +97,137 @@ body {
     }
 }
 
+.dark {
+    display: inline-block;
+    float: right;
+}
+
 main {
-    margin-top: 11.5vh;
+    margin-top: 11vh;
+}
+
+footer > p {
+    text-align: center;
+    opacity: 0.6;
 }
 
 p {
     font-family: "Alata", sans-serif;
-    color: #555588;
-    font-size: 0.85em;
+    color: $kindagrey;
+    font-size: 0.8em;
     margin-bottom: 1.4vh;
 }
 
 .container {
     font-family: "Alata", sans-serif;
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: grid;
     grid-template: 1fr 1fr 1fr / auto auto auto;
-    grid-column-gap: 3vw;
     grid-row-gap: 8vh;
     justify-items: center;
+    color: $lightblue;
     @for $i from 1 through 9 {
         div:nth-child(#{$i}) {
-            //background: rgba(random(255), random(255), random(255), 0.3);
-            text-align: center;
-            color: #202040;
-            opacity: 0.99;
-            max-width: 11vw;
-            h2 {
-                text-transform: lowercase;
-                font-size: 1.5em;
-                margin-bottom: 0.2em;
-            }
-            span {
-                text-decoration: underline;
-                text-decoration-style: dotted;
-                text-underline-offset: 0.15em;
-                margin: auto 0.2em;
-                font-size: 0.9em;
-                opacity: 0.6;
+            animation: float#{$i} 1s ease-in-out infinite;
+        }
+    }
+    div {
+        text-align: center;
+        max-width: 11vw;
+        opacity: 0.4;
+        transition: opacity 0.2s;
+        h2 {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            margin-bottom: 0.2em;
+        }
+        span {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 0.15em;
+            margin: auto 0.2em;
+            font-size: 0.9em;
+            opacity: 0.6;
+        }
+        &:hover {
+            transition: opacity 0.2s;
+            opacity: 0.8;
+        }
+    }
+}
+
+@for $i from 1 through 9 {
+    @keyframes float#{$i} {
+        $keyframesCount: 10;
+        @for $j from 1 through $keyframesCount {
+            $percentage: percentage($j * (1 / $keyframesCount));
+            @if ($percentage == 0%) {
+                #{$percentage} {
+                    transform: translateY(0px);
+                }
+            } @else if ($percentage == 100%) {
+                #{$percentage} {
+                    transform: translateY(0px);
+                }
+            } @else if $j <= $keyframesCount/2 {
+                #{$percentage} {
+                    @if ($i % 2 == 1) {
+                        transform: translateY((-1 * $j)/4 + px);
+                    } @else {
+                        transform: translateY($j/4 + px);
+                    }
+                }
+            } @else {
+                #{$percentage} {
+                    @if ($i % 2 == 1) {
+                        transform: translateY(
+                            (-1 * ($keyframesCount - $j))/4 + px
+                        );
+                    } @else {
+                        transform: translateY(($keyframesCount - $j)/4 + px);
+                    }
+                }
             }
         }
+    }
+}
+
+.toggle {
+    --size: 1.7rem;
+    margin-top: 0.36em;
+
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    width: var(--size);
+    height: var(--size);
+    box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+    border-radius: 999px;
+    color: hsl(240, 100%, 95%);
+
+    transition: all 500ms;
+
+    &:checked {
+        --ray-size: calc(var(--size) * -0.4);
+        --offset-orthogonal: calc(var(--size) * 0.65);
+        --offset-diagonal: calc(var(--size) * 0.45);
+
+        transform: scale(0.75);
+        color: hsl(40, 80%, 50%);
+        box-shadow: inset 0 0 0 var(--size),
+            calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+            var(--offset-orthogonal) 0 0 var(--ray-size),
+            0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+            0 var(--offset-orthogonal) 0 var(--ray-size),
+            calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1)
+                0 var(--ray-size),
+            var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+            calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0
+                var(--ray-size),
+            var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0
+                var(--ray-size);
     }
 }
 
