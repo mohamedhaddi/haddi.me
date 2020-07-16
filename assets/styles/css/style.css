@@ -165,6 +165,10 @@ p {
   margin: auto 0.2em;
   font-size: 0.9em;
   opacity: 0.6;
+  cursor: pointer;
+}
+.container div span:hover {
+  opacity: 0.8;
 }
 .container div:hover {
   transition: opacity 0.2s;
@@ -460,16 +464,17 @@ p {
   }
 }
 .toggle {
-  --size: 1.7rem;
-  margin-top: 0.36em;
+  --size: 1.3rem;
+  margin-top: 0.5em;
   appearance: none;
   outline: none;
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.08);
   width: var(--size);
   height: var(--size);
-  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  box-shadow: calc(var(--size) * -0) calc(var(--size) * 0) 1.5em 0.3em rgba(255, 255, 255, 0.15), inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
   border-radius: 999px;
-  color: #e6e6ff;
+  color: #c0cfff;
   transition: all 500ms;
 }
 .toggle:checked {
@@ -477,8 +482,8 @@ p {
   --offset-orthogonal: calc(var(--size) * 0.65);
   --offset-diagonal: calc(var(--size) * 0.45);
   transform: scale(0.75);
-  color: #e6a21a;
-  box-shadow: inset 0 0 0 var(--size), calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size), var(--offset-orthogonal) 0 0 var(--ray-size), 0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size), 0 var(--offset-orthogonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size), var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size), var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+  color: white;
+  box-shadow: 0 0 2em 0.2em rgba(255, 255, 255, 0.4), inset 0 0 0 var(--size), calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size), var(--offset-orthogonal) 0 0 var(--ray-size), 0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size), 0 var(--offset-orthogonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size), var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size), var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
 }
 
 /*# sourceMappingURL=style.css.map */
