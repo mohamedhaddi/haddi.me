@@ -23,11 +23,12 @@ logoElement.addEventListener("copy", (event) => {
     event.clipboardData.setData("text", "haddi.me");
 });
 
+/* change colors when toggle dark/night modes */
 function isChecked(toggleElement) {
     var a = document.getElementsByTagName("a");
-    document.body.style.background = toggleElement.checked
-        ? '#c0cfff url("assets/img/noise.png")'
-        : '#202040 url("assets/img/noise.png")';
+    document.querySelector(".body-helper").style.opacity = toggleElement.checked
+        ? "1"
+        : "0";
     logoElement.style.color = toggleElement.checked ? "#202040" : "#c0cfff";
     document.querySelector(".container").style.color = toggleElement.checked
         ? "#202040"
