@@ -34,7 +34,7 @@ ul {
 }
 
 body {
-  background-color: #202040;
+  background: #202040 url("../../img/noise.png");
   transition: background-color 1s;
   min-height: 90vh;
 }
@@ -100,6 +100,7 @@ main {
 
 footer > p {
   text-align: center;
+  font-size: 0.7em;
   opacity: 0.6;
 }
 

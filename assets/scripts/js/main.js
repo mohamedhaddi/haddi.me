@@ -25,9 +25,9 @@ logoElement.addEventListener("copy", (event) => {
 
 function isChecked(toggleElement) {
     var a = document.getElementsByTagName("a");
-    document.body.style.backgroundColor = toggleElement.checked
-        ? "#c0cfff"
-        : "#202040";
+    document.body.style.background = toggleElement.checked
+        ? '#c0cfff url("assets/img/noise.png")'
+        : '#202040 url("assets/img/noise.png")';
     logoElement.style.color = toggleElement.checked ? "#202040" : "#c0cfff";
     document.querySelector(".container").style.color = toggleElement.checked
         ? "#202040"
