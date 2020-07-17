@@ -40,7 +40,15 @@ ul {
 }
 
 html {
+    height: 100%;
     position: relative;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
     background: $darkblue;
     background: $darkblue url("../../img/noise.png");
     background: url("../../img/noise.png"),
@@ -51,7 +59,7 @@ html {
             rgba(14, 14, 29, 1) 100%
         );
     transition: background 1s;
-    height: 100vh;
+    //height: 100vh;
 }
 
 .body-helper {
@@ -328,9 +336,6 @@ p {
 }
 
 @media (max-width: 460px) {
-    html {
-        height: unset;
-    }
     #logo {
         font-size: 1.3em;
     }

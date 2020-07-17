@@ -34,12 +34,19 @@ ul {
 }
 
 html {
+  height: 100%;
   position: relative;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
   background: #202040;
   background: #202040 url("../../img/noise.png");
   background: url("../../img/noise.png"), radial-gradient(circle, #202040 0%, #191932 55%, #0e0e1d 100%);
   transition: background 1s;
-  height: 100vh;
 }
 
 .body-helper {
@@ -342,10 +349,6 @@ p {
   }
 }
 @media (max-width: 460px) {
-  html {
-    height: unset;
-  }
-
   #logo {
     font-size: 1.3em;
   }
