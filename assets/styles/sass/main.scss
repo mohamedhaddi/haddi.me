@@ -130,12 +130,11 @@ html {
 }
 
 .dark {
-    display: inline-block;
     float: right;
 }
 
 main {
-    margin-top: 11vh;
+    margin: 13vh auto;
 }
 
 footer > p {
@@ -156,8 +155,9 @@ p {
     width: 80%;
     margin: auto;
     display: grid;
-    grid-template: 1fr 1fr 1fr / auto auto auto;
-    grid-row-gap: 8vh;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-column-gap: 5vw;
+    grid-row-gap: 10vh;
     justify-items: center;
     color: $lightblue;
     @for $i from 1 through 9 {
@@ -167,7 +167,6 @@ p {
     }
     div {
         text-align: center;
-        max-width: 11vw;
         opacity: 0.4;
         transition: opacity 0.2s;
         h2 {
@@ -196,7 +195,7 @@ p {
 
 @for $i from 1 through 9 {
     @keyframes float#{$i} {
-        $keyframesCount: 10;
+        $keyframesCount: 2;
         @for $j from 1 through $keyframesCount {
             $percentage: percentage($j * (1 / $keyframesCount));
             @if ($percentage == 0%) {
@@ -210,23 +209,41 @@ p {
             } @else if $j <= $keyframesCount/2 {
                 #{$percentage} {
                     @if ($i % 2 == 1) {
-                        transform: translateY((-1 * $j)/4 + px);
+                        transform: translateY((-1 * $j) + px);
                     } @else {
-                        transform: translateY($j/4 + px);
+                        transform: translateY($j + px);
                     }
                 }
             } @else {
                 #{$percentage} {
                     @if ($i % 2 == 1) {
                         transform: translateY(
-                            (-1 * ($keyframesCount - $j))/4 + px
+                            (-1 * ($keyframesCount - $j)) + px
                         );
                     } @else {
-                        transform: translateY(($keyframesCount - $j)/4 + px);
+                        transform: translateY(($keyframesCount - $j) + px);
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes floatbasic {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(1px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    75% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
 
@@ -271,6 +288,71 @@ p {
                 var(--ray-size),
             var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0
                 var(--ray-size);
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        margin: 15vh auto;
+    }
+    .container {
+        div {
+            h2 {
+                font-size: 1em;
+            }
+            span {
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+
+@media (max-width: 610px) {
+    #logo {
+        font-size: 1.4em;
+    }
+    main {
+        margin: 8vh auto;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 7vh;
+        grid-column-gap: 10vw;
+        div {
+            animation: floatbasic 1s ease-in-out infinite !important;
+        }
+        div:nth-child(9) {
+            grid-column: 1/3;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    html {
+        height: unset;
+    }
+    #logo {
+        font-size: 1.3em;
+    }
+    main {
+        margin: 8vh auto;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 6.5vh;
+        grid-column-gap: 10vw;
+        div {
+            animation: floatbasic 1s ease-in-out infinite !important;
+            h2 {
+                font-size: 0.8em;
+            }
+            span {
+                font-size: 0.7em;
+            }
+        }
+        div:nth-child(9) {
+            grid-column: 1/3;
+        }
     }
 }
 
