@@ -86,10 +86,14 @@ body {
     max-width: 1024px;
     min-height: 90vh;
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    padding: 0 4.4vw 0 4.4vw;
+    grid-template-rows: auto 1fr auto; // header, main, footer
+    //padding: 0 4.4vw 0 4.4vw;
     margin: 3vw auto 0;
     position: relative;
+}
+
+header {
+    margin: 0 1.3em;
 }
 
 #logo {
@@ -142,6 +146,7 @@ body {
 }
 
 main {
+    display: flex;
     margin: 13vh auto;
 }
 
@@ -161,11 +166,11 @@ p {
 .container {
     font-family: "Alata", sans-serif;
     width: 80%;
-    margin: auto;
+    margin: auto auto;
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
-    grid-column-gap: 5vw;
-    grid-row-gap: 10vh;
+    grid-column-gap: 5em;
+    grid-row-gap: 4em;
     justify-items: center;
     color: $lightblue;
     @for $i from 1 through 9 {
@@ -299,6 +304,72 @@ p {
     }
 }
 
+/* for largest screens (above 3840px) */
+@media (min-width: 3840px) {
+    #toggle {
+        --size: 1.5rem;
+    }
+    #logo {
+        font-size: 2em;
+    }
+    .container {
+        width: 100%;
+        grid-column-gap: 10em;
+        grid-row-gap: 20em;
+        div {
+            h2 {
+                font-size: 1.6em;
+            }
+            span {
+                font-size: 1.4em;
+            }
+        }
+    }
+    footer > p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 3840px) {
+    .container {
+        grid-row-gap: 10em;
+        div {
+            h2 {
+                font-size: 1.3em;
+            }
+            span {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 2560px) {
+    .container {
+        grid-row-gap: 7em;
+        div {
+            h2 {
+                font-size: 1.2em;
+            }
+            span {
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+@media (max-width: 1680px) {
+    .container {
+        grid-row-gap: 5em;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        grid-row-gap: 4em;
+    }
+}
+
 @media (max-width: 800px) {
     main {
         margin: 15vh auto;
@@ -339,24 +410,12 @@ p {
     #logo {
         font-size: 1.3em;
     }
-    main {
-        margin: 8vh auto;
-    }
     .container {
-        grid-template-columns: 1fr 1fr;
         grid-row-gap: 6.5vh;
-        grid-column-gap: 10vw;
         div {
-            animation: floatbasic 1s ease-in-out infinite !important;
             h2 {
                 font-size: 0.8em;
             }
-            span {
-                font-size: 0.7em;
-            }
-        }
-        div:nth-child(9) {
-            grid-column: 1/3;
         }
     }
 }
