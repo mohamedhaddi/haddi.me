@@ -42,8 +42,8 @@ function isChecked(toggleElement) {
 
 /* quick, temporary ugly code for changing the language */
 languageElement.addEventListener("click", (event) => {
-    if (languageElement.getAttribute("href") === "#ar") {
-        languageElement.href = "#en";
+    if (languageElement.getAttribute("href") === "#en") {
+        languageElement.href = "#ar";
         paragraphsElements.item(1).innerHTML =
             "\
 مرحبًا،<br>\
@@ -111,8 +111,8 @@ languageElement.addEventListener("click", (event) => {
             .getElementsByClassName("icon")
             .item(5)
             .setAttribute("title", "حادثني على واتساب");
-    } else if (languageElement.getAttribute("href") === "#en") {
-        languageElement.href = "#ar";
+    } else if (languageElement.getAttribute("href") === "#ar") {
+        languageElement.href = "#en";
         paragraphsElements.item(1).innerHTML =
             "\
             hi,<br>\
