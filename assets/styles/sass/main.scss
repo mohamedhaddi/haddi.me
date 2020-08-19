@@ -3,6 +3,13 @@ $darkblue: #202040;
 $darkerblue: #101020;
 $lightblue: #c0cfff;
 $kindagrey: #555588;
+//$kindagrey: rgba(85, 85, 136, 0.85);
+
+#email {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.15em;
+}
 
 * {
     box-sizing: border-box;
@@ -163,7 +170,7 @@ p {
     margin-bottom: 1.4vh;
 }
 
-.container {
+#container {
     font-family: "Alata", sans-serif;
     width: 80%;
     margin: auto auto;
@@ -312,7 +319,7 @@ p {
     #logo {
         font-size: 2em;
     }
-    .container {
+    #container {
         width: 100%;
         grid-column-gap: 10em;
         grid-row-gap: 20em;
@@ -331,7 +338,7 @@ p {
 }
 
 @media (max-width: 3840px) {
-    .container {
+    #container {
         grid-row-gap: 10em;
         div {
             h2 {
@@ -345,7 +352,7 @@ p {
 }
 
 @media (max-width: 2560px) {
-    .container {
+    #container {
         grid-row-gap: 7em;
         div {
             h2 {
@@ -359,13 +366,13 @@ p {
 }
 
 @media (max-width: 1680px) {
-    .container {
+    #container {
         grid-row-gap: 5em;
     }
 }
 
 @media (max-width: 1440px) {
-    .container {
+    #container {
         grid-row-gap: 4em;
     }
 }
@@ -374,7 +381,7 @@ p {
     main {
         margin: 15vh auto;
     }
-    .container {
+    #container {
         div {
             h2 {
                 font-size: 1em;
@@ -393,7 +400,7 @@ p {
     main {
         margin: 8vh auto;
     }
-    .container {
+    #container {
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 7vh;
         grid-column-gap: 10vw;
@@ -410,7 +417,7 @@ p {
     #logo {
         font-size: 1.3em;
     }
-    .container {
+    #container {
         grid-row-gap: 6.5vh;
         div {
             h2 {
