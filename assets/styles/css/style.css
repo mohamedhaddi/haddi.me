@@ -15,20 +15,20 @@ a:active {
   color: white;
 }
 
-@keyframes quick-highlight {
-  0% {
-    color: #4400bb;
-    text-shadow: 0.2em 0em white;
-  }
-  100% {
-    color: #c0cfff;
-    text-shadow: 0em 0em white;
-  }
-}
-#logo:target {
-  animation: quick-highlight 0.5s;
+/* @keyframes quick-highlight {
+    0% {
+        color: #4400bb;
+        text-shadow: 0.2em 0em white;
+    }
+    100% {
+        color: $lightblue;
+        text-shadow: 0em 0em white;
+    }
 }
 
+#logo:target {
+    animation: quick-highlight 0.5s;
+} */
 ul {
   list-style: none;
 }
