@@ -13,7 +13,7 @@
 
 a {
   outline: none;
-  color: #c0cfff;
+  color: #202040;
   text-decoration: none;
 }
 
@@ -62,7 +62,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  opacity: 1;
   background: "#c0cfff";
   background: "#c0cfff" url("../../img/noise.png");
   background: url("../../img/noise.png"), radial-gradient(circle, #dde5ff 0%, #ccd8fb 55%, #c0cfff 100%);
@@ -88,7 +88,7 @@ header {
   display: inline-block;
   font-size: 1.5em;
   font-family: "Candal", sans-serif;
-  color: #c0cfff;
+  color: #202040;
   position: relative;
   user-select: none;
 }
@@ -156,7 +156,7 @@ p {
   grid-column-gap: 5em;
   grid-row-gap: 4em;
   justify-items: center;
-  color: #c0cfff;
+  color: #202040;
 }
 #container div:nth-child(1) {
   animation: float1 1s ease-in-out infinite;
@@ -315,7 +315,7 @@ p {
   color: #c0cfff;
   transition: all 500ms;
 }
-.toggle:checked {
+.toggle:not(:checked) {
   --size: 1.3rem;
   --ray-size: calc(var(--size) * -0.4);
   --offset-orthogonal: calc(var(--size) * 0.65);

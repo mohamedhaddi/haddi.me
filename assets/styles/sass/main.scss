@@ -19,7 +19,7 @@ $kindagrey: #555588;
 
 a {
     outline: none;
-    color: $lightblue;
+    color: $darkblue;
     text-decoration: none;
 }
 
@@ -76,7 +76,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     background: "#c0cfff";
     background: "#c0cfff" url("../../img/noise.png");
     background: url("../../img/noise.png"),
@@ -109,7 +109,7 @@ header {
     display: inline-block;
     font-size: 1.5em;
     font-family: "Candal", sans-serif;
-    color: $lightblue;
+    color: $darkblue;
     position: relative;
     user-select: none;
     span {
@@ -179,7 +179,7 @@ p {
     grid-column-gap: 5em;
     grid-row-gap: 4em;
     justify-items: center;
-    color: $lightblue;
+    color: $darkblue;
     @for $i from 1 through 9 {
         div:nth-child(#{$i}) {
             animation: float#{$i} 1s ease-in-out infinite;
@@ -285,7 +285,7 @@ p {
 
     transition: all 500ms;
 
-    &:checked {
+    &:not(:checked) {
         --size: 1.3rem;
         --ray-size: calc(var(--size) * -0.4);
         --offset-orthogonal: calc(var(--size) * 0.65);

@@ -29,14 +29,14 @@ logoElement.addEventListener("copy", (event) => {
 function isChecked(toggleElement) {
     var a = document.getElementsByTagName("a");
     document.querySelector(".body-helper").style.opacity = toggleElement.checked
-        ? "1"
-        : "0";
+        ? "0"
+        : "1";
     logoElement.style.color = toggleElement.checked ? "#202040" : "#c0cfff";
     document.querySelector("#container").style.color = toggleElement.checked
-        ? "#202040"
-        : "#c0cfff";
+        ? "#c0cfff"
+        : "#202040";
     for (var i = 0; i < a.length; i++) {
-        a[i].style.color = toggleElement.checked ? "#202040" : "#c0cfff";
+        a[i].style.color = toggleElement.checked ? "#c0cfff" : "#202040";
     }
 }
 
