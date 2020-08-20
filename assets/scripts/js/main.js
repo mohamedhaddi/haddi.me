@@ -59,8 +59,8 @@ languageElement.addEventListener("click", (event) => {
         paragraphsElements.item(1).setAttribute("dir", "rtl");
         paragraphsElements.item(2).setAttribute("dir", "rtl");
         document.querySelector("#email").style.color = toggleElement.checked
-            ? "#202040"
-            : "#c0cfff";
+            ? "#c0cfff"
+            : "#202040";
         document.querySelector("#container").style.fontWeight = "bold";
         paragraphsElements.item(3).style.flexDirection = "row-reverse";
         document
@@ -128,8 +128,8 @@ languageElement.addEventListener("click", (event) => {
         paragraphsElements.item(1).setAttribute("dir", "ltr");
         paragraphsElements.item(2).setAttribute("dir", "ltr");
         document.querySelector("#email").style.color = toggleElement.checked
-            ? "#202040"
-            : "#c0cfff";
+            ? "#c0cfff"
+            : "#202040";
         document.querySelector("#container").style.fontWeight = "initial";
         paragraphsElements.item(3).style.flexDirection = "row";
         document
