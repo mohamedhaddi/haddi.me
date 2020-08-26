@@ -61,7 +61,9 @@ languageElement.addEventListener("click", (event) => {
         document.querySelector("#email").style.color = toggleElement.checked
             ? "#c0cfff"
             : "#202040";
+        document.querySelector("#container").style.maxWidth = "18em";
         document.querySelector("#container").style.fontWeight = "bold";
+        document.querySelector("#container").style.fontSize = "1em";
         paragraphsElements.item(3).style.flexDirection = "row-reverse";
         document
             .getElementsByClassName("icon")
@@ -130,7 +132,9 @@ languageElement.addEventListener("click", (event) => {
         document.querySelector("#email").style.color = toggleElement.checked
             ? "#c0cfff"
             : "#202040";
+        document.querySelector("#container").style.maxWidth = "21em";
         document.querySelector("#container").style.fontWeight = "initial";
+        document.querySelector("#container").style.fontSize = "0.9em";
         paragraphsElements.item(3).style.flexDirection = "row";
         document
             .getElementsByClassName("icon")
