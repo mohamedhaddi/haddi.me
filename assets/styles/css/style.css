@@ -50,7 +50,7 @@ body {
   min-height: 100%;
   height: auto;
   background: #202040;
-  background: #202040 url("../../img/noise.png");
+  background: #202040 url("../../img/noise-2.png");
   background: url("../../img/noise.png"), radial-gradient(circle, #202040 0%, #191932 55%, #0e0e1d 100%);
   transition: background 1s;
 }
