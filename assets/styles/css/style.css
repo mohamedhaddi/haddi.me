@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alata&family=Candal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Candal&family=Harmattan:wght@700&family=Tajawal:wght@400&display=swap");
 #email {
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -141,7 +141,6 @@ footer > p {
 }
 
 p {
-  font-family: "Alata", sans-serif;
   color: #666699;
   font-size: 0.8em;
   margin-bottom: 1.4vh;
