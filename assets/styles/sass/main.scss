@@ -57,7 +57,7 @@ body {
     min-height: 100%;
     height: auto;
     background: $darkblue;
-    background: $darkblue url("../../img/noise-2.png");
+    background: $darkblue url("../../img/noise.png");
     background: url("../../img/noise.png"),
         radial-gradient(
             circle,
@@ -78,8 +78,8 @@ body {
     height: 100%;
     opacity: 1;
     background: "#c0cfff";
-    background: "#c0cfff" url("../../img/noise.png");
-    background: url("../../img/noise.png"),
+    background: "#c0cfff" url("../../img/noise-2.png");
+    background: url("../../img/noise-2.png"),
         radial-gradient(
             circle,
             rgba(221, 229, 255, 1) 0%,

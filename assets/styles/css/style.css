@@ -50,7 +50,7 @@ body {
   min-height: 100%;
   height: auto;
   background: #202040;
-  background: #202040 url("../../img/noise-2.png");
+  background: #202040 url("../../img/noise.png");
   background: url("../../img/noise.png"), radial-gradient(circle, #202040 0%, #191932 55%, #0e0e1d 100%);
   transition: background 1s;
 }
@@ -64,8 +64,8 @@ body {
   height: 100%;
   opacity: 1;
   background: "#c0cfff";
-  background: "#c0cfff" url("../../img/noise.png");
-  background: url("../../img/noise.png"), radial-gradient(circle, #dde5ff 0%, #ccd8fb 55%, #c0cfff 100%);
+  background: "#c0cfff" url("../../img/noise-2.png");
+  background: url("../../img/noise-2.png"), radial-gradient(circle, #dde5ff 0%, #ccd8fb 55%, #c0cfff 100%);
   transition: opacity 1s ease-out;
 }
 
