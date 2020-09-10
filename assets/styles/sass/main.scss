@@ -52,6 +52,7 @@ html {
 }
 
 body {
+    font-family: "Alata", monospace;
     position: absolute;
     width: 100%;
     min-height: 100%;
@@ -108,7 +109,7 @@ header {
     outline: none;
     display: inline-block;
     font-size: 1.5em;
-    font-family: "Candal", sans-serif;
+    font-family: "Candal", monospace;
     color: $darkblue;
     position: relative;
     user-select: none;
@@ -170,7 +171,6 @@ p {
 }
 
 #container {
-    font-family: "Alata", sans-serif;
     width: 80%;
     margin: auto auto;
     display: grid;

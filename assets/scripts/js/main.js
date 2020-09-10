@@ -63,8 +63,8 @@ languageElement.addEventListener("click", (event) => {
             : "#202040";
         document.querySelector("#container").style.maxWidth = "18em";
         document.querySelector("#container").style.fontWeight = "bold";
-        document.querySelector("#container").style.fontFamily =
-            "'Harmattan', sans-serif";
+        document.querySelector("body").style.fontFamily =
+            "'Harmattan', monospace";
         document.getElementsByTagName("p").item(1).style.fontSize = "0.9em";
         document.getElementsByTagName("p").item(2).style.fontSize = "0.9em";
         document.querySelector("#container").style.lineHeight = "1.2em";
@@ -138,8 +138,7 @@ languageElement.addEventListener("click", (event) => {
             : "#202040";
         document.querySelector("#container").style.maxWidth = "21em";
         document.querySelector("#container").style.fontWeight = "initial";
-        document.querySelector("#container").style.fontFamily =
-            "'Alata', sans-serif";
+        document.querySelector("body").style.fontFamily = "'Alata', monospace";
         document.getElementsByTagName("p").item(1).style.fontSize = "0.8em";
         document.getElementsByTagName("p").item(2).style.fontSize = "0.8em";
         document.querySelector("#container").style.lineHeight = "normal";
