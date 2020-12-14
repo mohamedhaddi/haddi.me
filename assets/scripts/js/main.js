@@ -47,9 +47,8 @@ languageElement.addEventListener("click", (event) => {
         paragraphsElements.item(1).innerHTML =
             "\
 مرحبًا،<br>\
-    اسمي محمّد هدّي.<br>\
-        أكتب أكواد برمجيّة، أصمّم، أصوّر وأنتج مرئيّات (وأحيانًا موسيقى).<br>\
-    ";
+    اسمي محمّد هدّي<br>\
+        أكتب أكواد برمجيّة، أصمّم، ألتقط صورًا (وأنتج فيديوهات أحيانًا).<br>";
         paragraphsElements.item(2).innerHTML =
             '\
         بينما أعمل على هذا الموقع، يمكنك زيارتي في إحدى المواقع أسفله أو \
@@ -104,18 +103,10 @@ languageElement.addEventListener("click", (event) => {
         document
             .getElementsByClassName("icon")
             .item(4)
-            .setAttribute("alt", "صفحتي على ساوندكلاود");
-        document
-            .getElementsByClassName("icon")
-            .item(4)
-            .setAttribute("title", "صفحتي على ساوندكلاود");
-        document
-            .getElementsByClassName("icon")
-            .item(5)
             .setAttribute("alt", "حادثني على واتساب");
         document
             .getElementsByClassName("icon")
-            .item(5)
+            .item(4)
             .setAttribute("title", "حادثني على واتساب");
     } else if (languageElement.getAttribute("href") === "#ar") {
         languageElement.href = "#en";
@@ -123,7 +114,7 @@ languageElement.addEventListener("click", (event) => {
             "\
             hi,<br>\
             my name is mohamed haddi.<br>\
-            i code, design, take photos and make videos (and music sometimes).<br>\
+            i code, design, take photos (and make videos sometimes).<br>\
         ";
         paragraphsElements.item(2).innerHTML =
             '\
@@ -178,19 +169,10 @@ languageElement.addEventListener("click", (event) => {
         document
             .getElementsByClassName("icon")
             .item(4)
-            .setAttribute("alt", "my SoundCloud");
-        document
-            .getElementsByClassName("icon")
-            .item(4)
-            .setAttribute("title", "my SoundCloud");
-        document
-            .getElementsByClassName("icon")
-            .item(5)
             .setAttribute("alt", "chat with me on WhatsApp");
         document
             .getElementsByClassName("icon")
-            .item(5)
+            .item(4)
             .setAttribute("title", "chat with me on WhatsApp");
     }
 });
-
