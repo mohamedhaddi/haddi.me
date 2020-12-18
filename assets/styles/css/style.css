@@ -158,31 +158,40 @@ p {
   color: #202040;
 }
 #container div:nth-child(1) {
-  animation: float1 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.3525773639s;
 }
 #container div:nth-child(2) {
-  animation: float2 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.2689276958s;
 }
 #container div:nth-child(3) {
-  animation: float3 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.338488091s;
 }
 #container div:nth-child(4) {
-  animation: float4 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.1161161692s;
 }
 #container div:nth-child(5) {
-  animation: float5 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.0539925106s;
 }
 #container div:nth-child(6) {
-  animation: float6 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.4484478214s;
 }
 #container div:nth-child(7) {
-  animation: float7 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.9588828639s;
 }
 #container div:nth-child(8) {
-  animation: float8 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.4544986092s;
 }
 #container div:nth-child(9) {
-  animation: float9 1s ease-in-out infinite;
+  animation: hover 2.2s infinite;
+  animation-delay: 0.7537584019s;
 }
 #container div {
   text-align: center;
@@ -211,93 +220,24 @@ p {
   opacity: 0.8;
 }
 
-@keyframes float1 {
-  50% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes float2 {
-  50% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes float3 {
-  50% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes float4 {
-  50% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes float5 {
-  50% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes float6 {
-  50% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes float7 {
-  50% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes float8 {
-  50% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes float9 {
-  50% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes floatbasic {
+@keyframes hover {
   0% {
-    transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(1px);
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
   }
   50% {
-    transform: translateY(2px);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
   }
-  75% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(0px);
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
   }
 }
 .toggle {
@@ -407,9 +347,11 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 7vh;
     grid-column-gap: 10vw;
-  }
-  #container div {
-    animation: floatbasic 1s ease-in-out infinite !important;
+    /*
+    div {
+        animation: floatbasic 1s ease-in-out infinite !important;
+    }
+    */
   }
   #container div:nth-child(9) {
     grid-column: 1/3;
