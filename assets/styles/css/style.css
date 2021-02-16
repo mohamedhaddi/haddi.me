@@ -17,7 +17,7 @@ body {
   height: 100%;
   background: #ccc;
   background: #ccc url("../../img/noise-2.png");
-  background: url("../../img/noise-2.png"), linear-gradient(-90deg, #cccccc 0%, #dedede 35%, white 100%);
+  background: url("../../img/noise-2.png"), linear-gradient(90deg, #cccccc 0%, #dedede 35%, white 100%);
 }
 
 #wrapper {
