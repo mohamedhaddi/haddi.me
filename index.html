@@ -79,6 +79,21 @@
             </main>
             <footer></footer>
         </div>
+        <script>
+            /* delaying the logo's hyperlink target (homepage)
+             * until after hover's transition effect, to fix the
+             * problem of the hover effect taking place until
+             * clicking in mobile devices, which results in the
+             * page loading before the transition is finished
+             */
+            let logoElement = document.querySelector("#logo");
+            logoElement.addEventListener("click", (event) => {
+                event.preventDefault();
+                setTimeout(function () {
+                    window.location.href = ".";
+                }, 700);
+            });
+        </script>
         <!-- <script src="assets/scripts/js/main.js" charset="utf-8"></script> -->
     </body>
 </html>
