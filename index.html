@@ -52,14 +52,18 @@
                 <br />
                 <a target="_blank" href="./blog/">Blog</a>
                 <br />
-                <div id="contact">
+                <div class="contact">
                     <a href="#">Contact</a>
-                    <span id="contact-links">
+                    <span class="contact-links">
                         <a
+                            class="contact-link"
                             href="mailto:m.haddi.95@gmail.com?subject=haddi.me inquiry: "
                             >Email</a
                         >
-                        <a target="_blank" href="https://wa.me/212699074250"
+                        <a
+                            class="contact-link"
+                            target="_blank"
+                            href="https://wa.me/212699074250"
                             >WhatsApp</a
                         >
                     </span>
@@ -87,14 +91,18 @@
                 <br />
                 <a target="_blank" href="./blog/">مدونة</a>
                 <br />
-                <div id="contact">
+                <div class="contact">
                     <a href="#">تواصل</a>
-                    <span id="contact-links">
+                    <span class="contact-links">
                         <a
+                            class="contact-link"
                             href="mailto:m.haddi.95@gmail.com?subject=haddi.me inquiry: "
                             >إيميل</a
                         >
-                        <a target="_blank" href="https://wa.me/212699074250"
+                        <a
+                            class="contact-link"
+                            target="_blank"
+                            href="https://wa.me/212699074250"
                             >واتساب</a
                         >
                     </span>
@@ -138,11 +146,17 @@
                     arMain.style.display = "none";
                     lang.innerHTML = "عربية";
                     lang.href = "#en";
+                    enMain.querySelectorAll(".contact-link").forEach((a) => {
+                        a.style.marginLeft = "0.3em";
+                    });
                 } else {
                     arMain.style.display = "block";
                     enMain.style.display = "none";
                     lang.innerHTML = "English";
                     lang.href = "#ar";
+                    arMain.querySelectorAll(".contact-link").forEach((a) => {
+                        a.style.marginRight = "0.3em";
+                    });
                 }
             });
         </script>
