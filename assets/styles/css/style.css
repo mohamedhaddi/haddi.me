@@ -131,6 +131,11 @@ hr {
   transition: width 0.5s;
 }
 
+::selection {
+  background: #222222;
+  color: #ccc;
+}
+
 a {
   outline: none;
   color: #000;
