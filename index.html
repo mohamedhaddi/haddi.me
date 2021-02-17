@@ -10,20 +10,6 @@
             type="text/css"
             media="all"
         />
-        <style type="text/css" media="screen">
-            #contact-links {
-                opacity: 0;
-                margin-left: 0;
-                transition: opacity 0.5s, margin-left 0.5s;
-            }
-
-            #contact:hover #contact-links,
-            #contact:active #contact-links {
-                opacity: 1;
-                margin-left: 0.3em;
-                transition: opacity 0.5s, margin-left 0.5s;
-            }
-        </style>
         <!--[if lt IE 7]>
             <style type="text/css">
                 .comment .button {
@@ -79,7 +65,14 @@
                     </span>
                 </div>
             </main>
-            <footer></footer>
+            <footer>
+                <p>
+                    <span id="year"></span> ©
+                    <a target="_blank" href="https://github.com/mohamedhaddi"
+                        >GitHub</a
+                    >
+                </p>
+            </footer>
         </div>
         <script>
             /* delaying the logo's hyperlink target (homepage)
@@ -88,13 +81,19 @@
              * clicking in mobile devices, which results in the
              * page loading before the transition is finished
              */
-            let logoElement = document.querySelector("#logo");
-            logoElement.addEventListener("click", (event) => {
-                event.preventDefault();
-                setTimeout(function () {
-                    window.location.href = ".";
-                }, 700);
-            });
+            document
+                .getElementById("logo")
+                .addEventListener("click", (event) => {
+                    event.preventDefault();
+                    setTimeout(function () {
+                        window.location.href = ".";
+                    }, 700);
+                });
+
+            /* get current year to put in the footer */
+            document.getElementById(
+                "year"
+            ).innerHTML = new Date().getFullYear();
         </script>
         <!-- <script src="assets/scripts/js/main.js" charset="utf-8"></script> -->
     </body>
