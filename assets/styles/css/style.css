@@ -25,19 +25,19 @@ body {
   min-height: 90vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  margin: 4vw auto 0;
+  margin: calc((0.7px + 0.05335vmin) * 55) auto 0;
   position: relative;
 }
 
 header {
-  margin: 0 3vw;
+  margin: 0 13vw;
   font-family: "Lalezar", cursive;
 }
 
 main {
   font-family: "Amiri", serif;
-  font-size: 1.5em;
-  margin: 13vh 3vw 0;
+  font-size: calc((0.7px + 0.05335vmin) * 21);
+  margin: 15vh 13vw 0;
 }
 
 footer > p {
@@ -103,13 +103,26 @@ footer > p {
   text-decoration: none;
   color: #7a7a7a;
   font-size: 1.2em;
-  margin-top: 0.4em;
+  margin-top: 0.66em;
   float: right;
   transition: color 0.3s;
 }
 
 #ar:hover {
   color: #444;
+}
+
+hr {
+  width: 8.1em;
+  height: 0.25em;
+  background-color: #222222;
+  transition: width 0.5s;
+  margin-top: -0.3em;
+}
+
+#logo:hover ~ hr {
+  width: 9.3em;
+  transition: width 0.5s;
 }
 
 a {
