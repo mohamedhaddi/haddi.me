@@ -93,11 +93,11 @@ body {
 
 header {
   margin: 0 13vw;
-  font-family: "Lalezar", cursive;
+  font-family: "Lalezar", monospace;
 }
 
 main {
-  font-family: "Amiri", serif;
+  font-family: "Amiri", monospace;
   font-size: calc((0.7px + 0.05335vmin) * 19);
   margin: calc((0.7px + 0.05335vmin) * 85) 13vw 0;
 }
@@ -111,7 +111,7 @@ footer {
 }
 */
 footer p {
-  font-family: "Amiri", serif;
+  font-family: "Amiri", monospace;
   text-align: center;
   font-size: 0.8em;
   color: #444;

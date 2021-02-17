@@ -47,11 +47,11 @@ body {
 
 header {
     margin: 0 13vw;
-    font-family: "Lalezar", cursive;
+    font-family: "Lalezar", monospace;
 }
 
 main {
-    font-family: "Amiri", serif;
+    font-family: "Amiri", monospace;
     font-size: calc(#{$px} * 19);
     margin: calc(#{$px} * 85) 13vw 0;
 }
@@ -66,7 +66,7 @@ footer {
 */
 
 footer p {
-    font-family: "Amiri", serif;
+    font-family: "Amiri", monospace;
     text-align: center;
     font-size: 0.8em;
     color: $grey;
