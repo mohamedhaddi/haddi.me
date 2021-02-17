@@ -1,3 +1,0 @@
-# haddi.me
-
-hi.

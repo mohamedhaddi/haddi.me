@@ -102,6 +102,10 @@ main {
   margin: calc((0.7px + 0.05335vmin) * 85) 13vw 0;
 }
 
+#ar {
+  direction: rtl;
+}
+
 /*
 footer {
     margin: 0 13vw;
@@ -175,17 +179,23 @@ footer a {
   transition: margin-left 0.5s, opacity 0.5s;
 }
 
-#ar {
+#lang {
+  font-family: "Amiri", monospace;
   text-decoration: none;
   color: #7a7a7a;
   font-size: 1.2em;
   margin-top: 0.7em;
   float: right;
-  transition: color 0.3s;
+  opacity: 1;
+  transition: color 0.3s, opacity 0.3s;
 }
 
-#ar:hover {
+#lang:hover {
   color: #444;
+}
+
+#lang:active {
+  opacity: 0;
 }
 
 hr {
