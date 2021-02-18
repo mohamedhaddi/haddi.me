@@ -78,8 +78,8 @@ body {
   width: 100%;
   height: 100%;
   background: #ccc;
-  background: #ccc url("../../img/noise-2.png");
-  background: url("../../img/noise-2.png"), linear-gradient(360deg, #cccccc 0%, #dedede 35%, white 100%);
+  background: #ccc url("../../img/background/noise-2.png");
+  background: url("../../img/background/noise-2.png"), linear-gradient(360deg, #cccccc 0%, #dedede 35%, white 100%);
 }
 
 #wrapper {
