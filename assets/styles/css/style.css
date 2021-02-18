@@ -83,7 +83,7 @@ body {
 }
 
 #wrapper {
-  max-width: 1024px;
+  max-width: 100vmin;
   min-height: 90vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -92,14 +92,14 @@ body {
 }
 
 header {
-  margin: 0 13vw;
+  margin: 0 13%;
   font-family: "Lalezar", monospace;
 }
 
 main {
   font-family: "Amiri", monospace;
   font-size: calc((0.7px + 0.05335vmin) * 19);
-  margin: calc((0.7px + 0.05335vmin) * 85) 13vw 0;
+  margin: calc((0.7px + 0.05335vmin) * 85) 13% 0;
 }
 
 #ar {
@@ -108,7 +108,7 @@ main {
 
 /*
 footer {
-    margin: 0 13vw;
+    margin: 0 13%;
     padding-top: 1em;
     height: 100%;
     border-top: 1px solid lighten($grey, 40%);
@@ -117,7 +117,7 @@ footer {
 footer p {
   font-family: "Amiri", monospace;
   text-align: center;
-  font-size: 0.8em;
+  font-size: calc((0.7px + 0.05335vmin) * 12);
   color: #444;
   margin-bottom: calc((0.7px + 0.05335vmin) * 15);
 }
@@ -183,8 +183,8 @@ footer a {
   font-family: "Amiri", monospace;
   text-decoration: none;
   color: #7a7a7a;
-  font-size: 1.2em;
-  margin-top: 0.5em;
+  font-size: calc((0.7px + 0.05335vmin) * 19);
+  margin-top: 0.7em;
   float: right;
   opacity: 1;
   transition: color 0.3s, opacity 0.3s;
