@@ -145,7 +145,7 @@ footer a {
   display: inline-block;
   transform: rotate(180deg) scaleY(0.9);
   position: absolute;
-  bottom: 0.23em;
+  bottom: 0.24em;
   transition: transform 0.5s, bottom 0.5s;
 }
 #logo #logo-ar {
@@ -157,7 +157,7 @@ footer a {
 #logo #me {
   white-space: pre;
   display: inline-block;
-  margin-left: 0.09em;
+  margin-left: 0.13em;
   position: absolute;
   transition: transform 0.5s, margin-left 0.5s, opacity 0.5s;
 }

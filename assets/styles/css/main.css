@@ -153,7 +153,7 @@ footer a {
       -ms-transform: rotate(180deg) scaleY(0.9);
           transform: rotate(180deg) scaleY(0.9);
   position: absolute;
-  bottom: 0.23em;
+  bottom: 0.24em;
   -webkit-transition: bottom 0.5s, -webkit-transform 0.5s;
   transition: bottom 0.5s, -webkit-transform 0.5s;
   -o-transition: transform 0.5s, bottom 0.5s;
@@ -171,7 +171,7 @@ footer a {
 #logo #me {
   white-space: pre;
   display: inline-block;
-  margin-left: 0.09em;
+  margin-left: 0.13em;
   position: absolute;
   -webkit-transition: margin-left 0.5s, opacity 0.5s, -webkit-transform 0.5s;
   transition: margin-left 0.5s, opacity 0.5s, -webkit-transform 0.5s;
