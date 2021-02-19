@@ -99,7 +99,7 @@ header {
 main {
   font-family: "Amiri", monospace;
   font-size: calc((0.7px + 0.05335vmin) * 19);
-  margin: calc((0.7px + 0.05335vmin) * 85) 13% 0;
+  margin: calc((0.7px + 0.05335vmin) * 85) 13%;
 }
 
 #ar {
