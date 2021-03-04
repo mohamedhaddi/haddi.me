@@ -189,6 +189,11 @@ ul {
     list-style: none;
 }
 
+.dev {
+    margin-top: 1.5em;
+    color: lighten($black, 50%);
+}
+
 .contact-links {
     opacity: 0;
     margin-left: 0;
