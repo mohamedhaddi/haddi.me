@@ -1,0 +1,70 @@
+#logo #i {
+    animation: i 2s infinite alternate;
+}
+
+#logo #me {
+    animation: me 2s infinite alternate;
+}
+
+#logo #logo-ar {
+    animation: logo-ar 2s infinite alternate;
+}
+
+@keyframes i {
+    0% {
+        transform: rotate(0deg);
+        bottom: 0;
+    }
+    30% {
+        transform: rotate(0deg);
+        bottom: 0;
+    }
+    70% {
+        transform: rotate(180deg) scaleY(0.9);
+        bottom: 0.24em;
+    }
+    100% {
+        transform: rotate(180deg) scaleY(0.9);
+        bottom: 0.24em;
+    }
+}
+
+@keyframes me {
+    0% {
+        transform: rotate(30deg);
+        margin-left: 0.5em;
+        opacity: 0;
+    }
+    30% {
+        transform: rotate(30deg);
+        margin-left: 0.5em;
+        opacity: 0;
+    }
+    70% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes logo-ar {
+    0% {
+        margin-left: 0.4em;
+        opacity: 1;
+    }
+    30% {
+        margin-left: 0.4em;
+        opacity: 1;
+    }
+    70% {
+        margin-left: 0;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0;
+        opacity: 0;
+    }
+}
