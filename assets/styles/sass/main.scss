@@ -192,6 +192,16 @@ ul {
 .dev {
     margin-top: 1.5em;
     color: lighten($black, 50%);
+    animation: fadeIn 3s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 
 .contact-links {
