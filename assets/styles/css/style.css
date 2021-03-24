@@ -154,8 +154,7 @@ footer a {
 }
 
 #logo {
-  width: 3em;
-  outline: none;
+  width: 4.3em;
   display: inline-block;
   font-size: calc((0.7px + 0.05335vmin) * 40);
   color: #222222;
@@ -243,9 +242,13 @@ hr {
 }
 
 a {
-  outline: none;
   color: #000;
   text-decoration: underline;
+}
+
+:focus {
+  outline: 3px solid #444;
+  outline-offset: 3px;
 }
 
 a:hover {
@@ -277,6 +280,7 @@ ul {
   transition: opacity 0.5s, margin-left 0.5s, margin-right 0.5s;
 }
 
+.contact:focus .contact-links,
 .contact:hover .contact-links,
 .contact:active .contact-links {
   opacity: 1;
