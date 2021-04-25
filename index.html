@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>haddi.me</title>
-        <link
-            rel="stylesheet"
-            href="assets/styles/css/main.css"
-            type="text/css"
-            media="all"
-        />
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>haddi.me</title>
+    <link rel="stylesheet" href="assets/styles/css/main.css" type="text/css" media="all" />
+    <!--[if lt IE 7]>
             <style type="text/css">
                 .contact-links {
                     opacity: 1;
@@ -18,172 +14,120 @@
                 }
             </style>
         <![endif]-->
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="./assets/img/favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/img/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/img/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
-    </head>
-    <body>
-        <div id="wrapper">
-            <header>
-                <a id="logo" href=".">
-                    <span id="hadd">hadd</span>
-                    <span id="i">i</span>
-                    <span id="logo-ar">هَدِّي</span>
-                    <span id="me"> me</span>
-                </a>
-                <a id="lang" href="#en">عربية</a>
-                <!-- <hr /> -->
-            </header>
-            <main id="en">
-                <p>Hi, my name is Mohamed Haddi.</p>
-                <p>I code, design, take photos and make videos (sometimes).</p>
-                <p class="dev">
-                    <em>This website is still under development.</em>
-                </p>
-                <br />
-                <a target="_blank" href="https://bit.ly/HADDI_Portfolio"
-                    >Portfolio</a
-                >
-                <br />
-                <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/mohamedhaddi/"
-                    >LinkedIn</a
-                >
-                <br />
-                <a
-                    target="_blank"
-                    href="https://www.flickr.com/photos/mohamedhaddi"
-                    >Photography</a
-                >
-                <br />
-                <!-- <a target="_blank" href="./blog/">Blog</a>
-                <br /> -->
-                <div class="contact">
-                    <a href="#">Contact</a>
-                    <span class="contact-links">
-                        <a
-                            class="contact-link"
-                            href="mailto:m.haddi.95@gmail.com?subject=haddi.me inquiry: "
-                            >Email</a
-                        >
-                        <a
-                            class="contact-link"
-                            target="_blank"
-                            href="https://wa.me/212699074250"
-                            >WhatsApp</a
-                        >
-                    </span>
-                </div>
-            </main>
-            <main id="ar" style="display: none">
-                <p>السلام عليكم، أنا محمد هدي.</p>
-                <p>أبرمج، أصمم، ألتقط صورًا وأنتج مقاطع فيديو (أحيانًا).</p>
-                <p class="dev"><em>هذا الموقع لا يزال تحت التطوير.</em></p>
-                <br />
-                <a target="_blank" href="https://bit.ly/HADDI_Portfolio"
-                    >نماذج الأعمال</a
-                >
-                <br />
-                <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/mohamedhaddi/"
-                    >لينكد إن</a
-                >
-                <br />
-                <a
-                    target="_blank"
-                    href="https://www.flickr.com/photos/mohamedhaddi"
-                    >تصوير</a
-                >
-                <br />
-                <!-- <a target="_blank" href="./blog/">مدونة</a>
-                <br /> -->
-                <div class="contact">
-                    <a href="#">تواصل</a>
-                    <span class="contact-links">
-                        <a
-                            class="contact-link"
-                            href="mailto:m.haddi.95@gmail.com?subject=haddi.me inquiry: "
-                            >إيميل</a
-                        >
-                        <a
-                            class="contact-link"
-                            target="_blank"
-                            href="https://wa.me/212699074250"
-                            >واتساب</a
-                        >
-                    </span>
-                </div>
-            </main>
-            <footer>
-                <p>
-                    <span id="year"></span> © Hosted on
-                    <a target="_blank" href="https://github.com/mohamedhaddi"
-                        >GitHub</a
-                    >
-                </p>
-            </footer>
-        </div>
-        <script>
-            /* delaying the logo's hyperlink target (homepage)
-             * until after hover's transition effect, to fix the
-             * problem of the hover effect taking place until
-             * clicking in mobile devices, which results in the
-             * page loading before the transition is finished
-             */
-            logo = document.getElementById("logo");
-            logo.addEventListener("click", (event) => {
-                event.preventDefault();
-                setTimeout(function () {
-                    window.location.href = ".";
-                }, 700);
-            });
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
+</head>
 
-            /* get current year to put in the footer */
-            year = document.getElementById("year");
-            year.innerHTML = new Date().getFullYear();
+<body>
+    <div id="wrapper">
+        <header>
+            <a id="logo" href=".">
+                <span id="hadd">hadd</span>
+                <span id="i">i</span>
+                <span id="logo-ar">هَدِّي</span>
+                <span id="me"> me</span>
+            </a>
+            <a id="lang" href="#en">عربية</a>
+            <!-- <hr /> -->
+        </header>
+        <main id="en">
+            <p>Hi, my name is Mohamed Haddi.</p>
+            <p>I code, design, take photos and make videos (sometimes).</p>
+            <p class="dev">
+                <em>This website is still under development.</em>
+            </p>
+            <br />
+            <a target="_blank" href="https://bit.ly/HADDI_Portfolio">Portfolio</a>
+            <br />
+            <a target="_blank" href="https://www.linkedin.com/in/mohamedhaddi/">LinkedIn</a>
+            <br />
+            <a target="_blank" href="https://www.flickr.com/photos/mohamedhaddi">Photography</a>
+            <br />
+            <!-- <a target="_blank" href="./blog/">Blog</a>
+                <br /> -->
+            <div class="contact">
+                <a href="#">Contact</a>
+                <span class="contact-links">
+                    <a class="contact-link" href="mailto:mohamed@haddi.me?subject=There haddi.me: ">Email</a>
+                    <a class="contact-link" target="_blank" href="https://wa.me/212699074250">WhatsApp</a>
+                </span>
+            </div>
+        </main>
+        <main id="ar" style="display: none">
+            <p>السلام عليكم، أنا محمد هدي.</p>
+            <p>أبرمج، أصمم، ألتقط صورًا وأنتج مقاطع فيديو (أحيانًا).</p>
+            <p class="dev"><em>هذا الموقع لا يزال تحت التطوير.</em></p>
+            <br />
+            <a target="_blank" href="https://bit.ly/HADDI_Portfolio">نماذج الأعمال</a>
+            <br />
+            <a target="_blank" href="https://www.linkedin.com/in/mohamedhaddi/">لينكد إن</a>
+            <br />
+            <a target="_blank" href="https://www.flickr.com/photos/mohamedhaddi">تصوير</a>
+            <br />
+            <!-- <a target="_blank" href="./blog/">مدونة</a>
+                <br /> -->
+            <div class="contact">
+                <a href="#">تواصل</a>
+                <span class="contact-links">
+                    <a class="contact-link" href="mailto:mohamed@haddi.me?subject=إلى haddi.me: ">إيميل</a>
+                    <a class="contact-link" target="_blank" href="https://wa.me/212699074250">واتساب</a>
+                </span>
+            </div>
+        </main>
+        <footer>
+            <p>
+                <span id="year"></span> © Hosted on
+                <a target="_blank" href="https://github.com/mohamedhaddi">GitHub</a>
+            </p>
+        </footer>
+    </div>
+    <script>
+        /* delaying the logo's hyperlink target (homepage)
+         * until after hover's transition effect, to fix the
+         * problem of the hover effect taking place until
+         * clicking in mobile devices, which results in the
+         * page loading before the transition is finished
+         */
+        logo = document.getElementById("logo");
+        logo.addEventListener("click", (event) => {
+            event.preventDefault();
+            setTimeout(function () {
+                window.location.href = ".";
+            }, 700);
+        });
 
-            /* change language */
-            lang = document.getElementById("lang");
-            enMain = document.getElementById("en");
-            arMain = document.getElementById("ar");
-            lang.addEventListener("click", (event) => {
-                if (lang.innerText === "English") {
-                    enMain.style.display = "block";
-                    arMain.style.display = "none";
-                    lang.innerHTML = "عربية";
-                    lang.href = "#en";
-                    lang.style.marginTop = "0.7em";
-                    enMain.querySelectorAll(".contact-link").forEach((a) => {
-                        a.style.marginLeft = "0.3em";
-                    });
-                } else {
-                    arMain.style.display = "block";
-                    enMain.style.display = "none";
-                    lang.innerHTML = "English";
-                    lang.href = "#ar";
-                    lang.style.marginTop = "0.8em";
-                    arMain.querySelectorAll(".contact-link").forEach((a) => {
-                        a.style.marginRight = "0.3em";
-                    });
-                }
-            });
-        </script>
-    </body>
+        /* get current year to put in the footer */
+        year = document.getElementById("year");
+        year.innerHTML = new Date().getFullYear();
+
+        /* change language */
+        lang = document.getElementById("lang");
+        enMain = document.getElementById("en");
+        arMain = document.getElementById("ar");
+        lang.addEventListener("click", (event) => {
+            if (lang.innerText === "English") {
+                enMain.style.display = "block";
+                arMain.style.display = "none";
+                lang.innerHTML = "عربية";
+                lang.href = "#en";
+                lang.style.marginTop = "0.7em";
+                enMain.querySelectorAll(".contact-link").forEach((a) => {
+                    a.style.marginLeft = "0.3em";
+                });
+            } else {
+                arMain.style.display = "block";
+                enMain.style.display = "none";
+                lang.innerHTML = "English";
+                lang.href = "#ar";
+                lang.style.marginTop = "0.8em";
+                arMain.querySelectorAll(".contact-link").forEach((a) => {
+                    a.style.marginRight = "0.3em";
+                });
+            }
+        });
+    </script>
+</body>
+
 </html>
