@@ -52,6 +52,11 @@ header {
     font-family: "Lalezar", monospace;
 }
 
+#title {
+    float: right;
+    font-size: calc(#{$px} * 40);
+}
+
 main {
     font-family: "Amiri", monospace;
     font-size: calc(#{$px} * 19);
@@ -180,8 +185,8 @@ a {
 }
 
 :focus {
-    outline: 3px solid $grey;
-    outline-offset: 3px;
+    outline: 1px solid $grey;
+    // outline-offset: 3px;
 }
 
 a:hover {
@@ -231,4 +236,14 @@ ul {
 
 .contact-links a:hover {
     color: lighten($grey, 15%);
+}
+
+.blog {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.blog:hover, .blog:focus, .blog:active {
+    opacity: 1;
+    transition: opacity 0.5s;
 }

@@ -123,6 +123,11 @@ header {
   font-family: "Lalezar", monospace;
 }
 
+#title {
+  float: right;
+  font-size: calc((0.7px + 0.05335vmin) * 40);
+}
+
 main {
   font-family: "Amiri", monospace;
   font-size: calc((0.7px + 0.05335vmin) * 19);
@@ -247,8 +252,7 @@ a {
 }
 
 :focus {
-  outline: 3px solid #444;
-  outline-offset: 3px;
+  outline: 1px solid #444;
 }
 
 a:hover {
@@ -297,6 +301,16 @@ ul {
 
 .contact-links a:hover {
   color: #6a6a6a;
+}
+
+.blog {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.blog:hover, .blog:focus, .blog:active {
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

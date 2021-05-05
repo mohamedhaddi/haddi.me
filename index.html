@@ -23,7 +23,7 @@
 <body>
     <div id="wrapper">
         <header>
-            <a id="logo" href=".">
+            <a id="logo" href="./index.html">
                 <span id="hadd">hadd</span>
                 <span id="i">i</span>
                 <span id="logo-ar">هَدِّي</span>
@@ -45,8 +45,6 @@
             <br />
             <a target="_blank" href="https://www.flickr.com/photos/mohamedhaddi">Photography</a>
             <br />
-            <!-- <a target="_blank" href="./blog/">Blog</a>
-                <br /> -->
             <div class="contact">
                 <a href="#">Contact</a>
                 <span class="contact-links">
@@ -54,6 +52,7 @@
                     <a class="contact-link" target="_blank" href="https://wa.me/212699074250">WhatsApp</a>
                 </span>
             </div>
+            <a class="blog" href="./blog/">Blog</a>
         </main>
         <main id="ar" style="display: none">
             <p>السلام عليكم، أنا محمد هدي.</p>
@@ -66,8 +65,6 @@
             <br />
             <a target="_blank" href="https://www.flickr.com/photos/mohamedhaddi">تصوير</a>
             <br />
-            <!-- <a target="_blank" href="./blog/">مدونة</a>
-                <br /> -->
             <div class="contact">
                 <a href="#">تواصل</a>
                 <span class="contact-links">
@@ -75,6 +72,7 @@
                     <a class="contact-link" target="_blank" href="https://wa.me/212699074250">واتساب</a>
                 </span>
             </div>
+            <a class="blog" href="./blog/index.html#ar">مدونة</a>
         </main>
         <footer>
             <p>
@@ -83,51 +81,7 @@
             </p>
         </footer>
     </div>
-    <script>
-        /* delaying the logo's hyperlink target (homepage)
-         * until after hover's transition effect, to fix the
-         * problem of the hover effect taking place until
-         * clicking in mobile devices, which results in the
-         * page loading before the transition is finished
-         */
-        logo = document.getElementById("logo");
-        logo.addEventListener("click", (event) => {
-            event.preventDefault();
-            setTimeout(function () {
-                window.location.href = ".";
-            }, 700);
-        });
-
-        /* get current year to put in the footer */
-        year = document.getElementById("year");
-        year.innerHTML = new Date().getFullYear();
-
-        /* change language */
-        lang = document.getElementById("lang");
-        enMain = document.getElementById("en");
-        arMain = document.getElementById("ar");
-        lang.addEventListener("click", (event) => {
-            if (lang.innerText === "English") {
-                enMain.style.display = "block";
-                arMain.style.display = "none";
-                lang.innerHTML = "عربية";
-                lang.href = "#en";
-                lang.style.marginTop = "0.7em";
-                enMain.querySelectorAll(".contact-link").forEach((a) => {
-                    a.style.marginLeft = "0.3em";
-                });
-            } else {
-                arMain.style.display = "block";
-                enMain.style.display = "none";
-                lang.innerHTML = "English";
-                lang.href = "#ar";
-                lang.style.marginTop = "0.8em";
-                arMain.querySelectorAll(".contact-link").forEach((a) => {
-                    a.style.marginRight = "0.3em";
-                });
-            }
-        });
-    </script>
+    <script src="./assets/scripts/js/main.js"></script>
 </body>
 
 </html>
