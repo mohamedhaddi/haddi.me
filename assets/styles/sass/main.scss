@@ -1,12 +1,14 @@
-@use 'fonts';
-// @use 'animateLogo';
-
-// @import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Amiri&display=swap");
-
 $black: #222222;
 $grey: #444;
 $white: #ccc;
 $px: "(0.7px + 0.05335vmin)";
+
+@use 'fonts';
+@use 'article';
+@use 'blog';
+// @use 'animateLogo';
+
+// @import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Amiri&display=swap");
 
 * {
     box-sizing: border-box;
@@ -50,11 +52,6 @@ body {
 header {
     margin: 0 13%;
     font-family: "Lalezar", monospace;
-}
-
-#title {
-    float: right;
-    font-size: calc(#{$px} * 40);
 }
 
 main {

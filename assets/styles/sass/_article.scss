@@ -1,0 +1,32 @@
+$black: #222222;
+$grey: #444;
+$white: #ccc;
+$px: "(0.7px + 0.05335vmin)";
+
+#back {
+    font-family: "Amiri", monospace;
+    text-decoration: none;
+    color: lighten($grey, 21%);
+    font-size: calc((0.7px + 0.05335vmin) * 19);
+    margin-top: 0.7em;
+    margin-bottom: 2em;
+    margin-right: 1em;
+    float: left;
+    opacity: 1;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+#title {
+    float: right;
+    font-size: calc(#{$px} * 40);
+    text-align: center;
+    a {
+        text-decoration: none;
+    }
+}
+
+#article {
+    direction: rtl;
+    margin-top: 5%;
+    line-height: 2.1;
+}

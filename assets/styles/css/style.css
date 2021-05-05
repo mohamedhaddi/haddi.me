@@ -88,6 +88,34 @@
   src: url("../../fonts/zrfl0HLVx-HwTP82Yaf4Iw.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+#back {
+  font-family: "Amiri", monospace;
+  text-decoration: none;
+  color: #7a7a7a;
+  font-size: calc((0.7px + 0.05335vmin) * 19);
+  margin-top: 0.7em;
+  margin-bottom: 2em;
+  margin-right: 1em;
+  float: left;
+  opacity: 1;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+#title {
+  float: right;
+  font-size: calc((0.7px + 0.05335vmin) * 40);
+  text-align: center;
+}
+#title a {
+  text-decoration: none;
+}
+
+#article {
+  direction: rtl;
+  margin-top: 5%;
+  line-height: 2.1;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -121,11 +149,6 @@ body {
 header {
   margin: 0 13%;
   font-family: "Lalezar", monospace;
-}
-
-#title {
-  float: right;
-  font-size: calc((0.7px + 0.05335vmin) * 40);
 }
 
 main {
