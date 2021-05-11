@@ -154,7 +154,7 @@ header {
 main {
   font-family: "Amiri", monospace;
   font-size: calc((0.7px + 0.05335vmin) * 19);
-  margin: calc((0.7px + 0.05335vmin) * 85) 13%;
+  margin: calc((0.7px + 0.05335vmin) * 85) 13% calc((0.7px + 0.05335vmin) * 50);
 }
 
 #ar {
