@@ -16,7 +16,7 @@ if (logo) {
 
 /* get current year to put in the footer */
 year = document.getElementById("year");
-year.innerHTML = new Date().getFullYear();
+year.innerHTML = "2020 — " + new Date().getFullYear();
 
 /* change language */
 lang = document.getElementById("lang");
