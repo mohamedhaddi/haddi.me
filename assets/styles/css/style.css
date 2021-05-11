@@ -92,9 +92,9 @@
   font-family: "Amiri", monospace;
   text-decoration: none;
   color: #7a7a7a;
-  font-size: calc((0.7px + 0.05335vmin) * 19);
-  margin-top: 0.7em;
-  margin-bottom: 2em;
+  font-size: calc((0.7px + 0.05335vmin) * 16);
+  margin-top: 0.5em;
+  margin-bottom: 1em;
   margin-right: 1em;
   float: left;
   opacity: 1;
@@ -103,7 +103,7 @@
 
 #title {
   float: right;
-  font-size: calc((0.7px + 0.05335vmin) * 40);
+  font-size: calc((0.7px + 0.05335vmin) * 30);
   text-align: center;
 }
 #title a {
@@ -114,6 +114,64 @@
   direction: rtl;
   margin-top: 5%;
   line-height: 2.1;
+  font-size: calc((0.7px + 0.05335vmin) * 17);
+  margin-bottom: 5%;
+}
+
+#navigator {
+  margin: auto;
+  width: 34%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+#navigator a {
+  display: inline-block;
+  text-decoration: none;
+  color: #7a7a7a;
+  font-size: calc((0.7px + 0.05335vmin) * 16);
+}
+#navigator hr {
+  flex: auto;
+  margin: auto 5%;
+  height: 1px;
+  opacity: 0.08;
+  border: none;
+}
+#navigator #next span {
+  display: inline;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+#navigator #next:hover span {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.article-link {
+  text-decoration: none !important;
+}
+.article-link .article-link-content {
+  display: flex;
+  justify-content: space-between;
+}
+.article-link .article-link-content p {
+  display: inline-block;
+}
+.article-link .article-link-content hr {
+  flex: auto;
+  margin: auto 3%;
+  height: 1px;
+  opacity: 0.08;
+  border: none;
+}
+.article-link .article-link-content .article-link-title {
+  text-decoration: underline;
+}
+.article-link .article-link-content .article-link-date {
+  color: #7a7a7a;
+  font-size: calc((0.7px + 0.05335vmin) * 13);
+  margin-top: 0.5em;
 }
 
 * {

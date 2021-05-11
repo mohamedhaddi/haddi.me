@@ -1,0 +1,30 @@
+$black: #222222;
+$grey: #444;
+$white: #ccc;
+$px: "(0.7px + 0.05335vmin)";
+
+.article-link {
+	text-decoration: none !important;
+	.article-link-content {
+		display: flex;
+		justify-content: space-between;
+		p {
+			display: inline-block;
+		}
+		hr {
+			flex: auto;
+			margin: auto 3%;
+			height: 1px;
+			opacity: 0.08;
+			border: none;
+		}
+		.article-link-title {
+			text-decoration: underline;
+		}
+		.article-link-date {
+			color: lighten($grey, 21%);
+			font-size: calc(#{$px} * 13);
+			margin-top: .5em;
+		}
+	}
+}

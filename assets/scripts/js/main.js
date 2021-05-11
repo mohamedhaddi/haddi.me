@@ -5,12 +5,14 @@
  * page loading before the transition is finished
  */
 logo = document.getElementById("logo");
-logo.addEventListener("click", (event) => {
-	event.preventDefault();
-	setTimeout(function () {
-		window.location.href = "../index.html";
-	}, 700);
-});
+if (logo) {
+	logo.addEventListener("click", (event) => {
+		event.preventDefault();
+		setTimeout(function () {
+			window.location.href = "../index.html";
+		}, 700);
+	});
+}
 
 /* get current year to put in the footer */
 year = document.getElementById("year");

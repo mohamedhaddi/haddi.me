@@ -7,9 +7,9 @@ $px: "(0.7px + 0.05335vmin)";
     font-family: "Amiri", monospace;
     text-decoration: none;
     color: lighten($grey, 21%);
-    font-size: calc((0.7px + 0.05335vmin) * 19);
-    margin-top: 0.7em;
-    margin-bottom: 2em;
+    font-size: calc(#{$px} * 16);
+    margin-top: 0.5em;
+    margin-bottom: 1em;
     margin-right: 1em;
     float: left;
     opacity: 1;
@@ -18,7 +18,7 @@ $px: "(0.7px + 0.05335vmin)";
 
 #title {
     float: right;
-    font-size: calc(#{$px} * 40);
+    font-size: calc(#{$px} * 30);
     text-align: center;
     a {
         text-decoration: none;
@@ -29,4 +29,38 @@ $px: "(0.7px + 0.05335vmin)";
     direction: rtl;
     margin-top: 5%;
     line-height: 2.1;
+    font-size: calc(#{$px} * 17);
+    margin-bottom: 5%;
+}
+
+#navigator {
+    margin: auto;
+    width: 34%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    a {
+        display: inline-block;
+        text-decoration: none;
+		color: lighten($grey, 21%);
+		font-size: calc(#{$px} * 16);
+    }
+    hr {
+        flex: auto;
+        margin: auto 5%;
+        height: 1px;
+        opacity: 0.08;
+        border: none;
+    }
+    #next span {
+        display: inline;
+        opacity: 0;
+        transition: opacity .2s;
+    }
+    #next:hover {
+        span {
+            opacity: 1;
+            transition: opacity .2s;
+        }
+    }
 }
