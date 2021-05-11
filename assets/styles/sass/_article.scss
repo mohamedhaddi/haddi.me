@@ -57,7 +57,7 @@ $px: "(0.7px + 0.05335vmin)";
         opacity: 0;
         transition: opacity .2s;
     }
-    #next:hover {
+    #next:hover, #next:focus {
         span {
             opacity: 1;
             transition: opacity .2s;

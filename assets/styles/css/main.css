@@ -153,7 +153,7 @@
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-#navigator #next:hover span {
+#navigator #next:hover span, #navigator #next:focus span {
   opacity: 1;
   -webkit-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
