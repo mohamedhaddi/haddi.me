@@ -148,6 +148,10 @@
   transition: opacity 0.2s;
 }
 
+.emphasis {
+  background-color: yellow;
+}
+
 .article-link {
   text-decoration: none !important;
 }
