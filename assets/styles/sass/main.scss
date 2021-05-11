@@ -194,6 +194,10 @@ ul {
     list-style: none;
 }
 
+#en, #ar {
+    animation: fadeIn 1s ease-out;
+}
+
 .dev {
     margin-top: 1.5em;
     color: lighten($black, 50%);
