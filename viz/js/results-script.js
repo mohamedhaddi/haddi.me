@@ -4,12 +4,13 @@ const addHoverListeners = (trigger, target) => {
   trigger.addEventListener('mouseout', () => toggleBold(target));
 };
 
-// const url = new URL(document.location)
-// const parsed_raw_input = JSON.parse(url.searchParams.get("parsed_raw_input"))
-// const parsed_scored_output = JSON.parse(url.searchParams.get("parsed_scored_output"))
+const url = new URL(document.location)
+const parsed_raw_input = JSON.parse(url.searchParams.get("parsed_raw_input"))
+const parsed_scored_output = JSON.parse(url.searchParams.get("parsed_scored_output"))
 
-const parsed_raw_input = JSON.parse(localStorage.getItem('parsed_raw_input'))
-const parsed_scored_output = JSON.parse(localStorage.getItem('parsed_scored_output'))
+// const parsed_raw_input = JSON.parse(localStorage.getItem('parsed_raw_input'))
+// console.log(parsed_raw_input)
+// const parsed_scored_output = JSON.parse(localStorage.getItem('parsed_scored_output'))
 
 const visualizer = document.querySelector('.visualizer')
 visualizer.innerHTML = ""
