@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 400;
+    font-size: 1em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(150,150,150,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.header {
+  width: 100vw;
+  /* padding: 2% 10% 1% 10%; */
+  padding: 3% 10% 1% 10%;
+  position: relative;
+}
+
+/*
+.header::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: #ddd;
+    top: 100%;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+*/
+
+.wrapper {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.description {
+  margin-bottom: 1em;
+  color: #777;
+}
+
+.raw-input {
+  margin-top: 1em;
+}
+
+.scored-output {
+  margin-bottom: 1em;
+}
+
+.raw-input label {
+    margin-right: 0.65em;
+}
+
+.scored-output label {
+    margin-right: 0.2em;
+}
+
+.visualizer {
+    margin: 1.5em 0;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 4em;
+    text-align: center;
+}
+
+.visualizer h1 {
+  margin: auto;
+  font-size: 3.5em;
+  color: #ccc;
+}
+
+.visualizer > * {
+  margin-bottom: 1em;
+  display: flex;
+}
+
+.Pos {
+    background-color: #dae9d3;
+}
+
+.Pos:hover, .Neg:hover, .Neu:hover {
+    filter: brightness(105%);
+}
+
+.Neg {
+    background-color: #f5cbcc;
+}
+
+.Neu {
+    background-color: #d3d3d3;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.dotted-underline {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.1em;
+}
+
+.document, .topics {
+    padding: 1.4em;
+    border-radius: 0.4em;
+    background-color: #f8f8f8;
+}
+
+.document:hover, .topics:hover {
+  filter: brightness(98%);
+}
+
+.document {
+  flex: 1;
+}
+
+.topics {
+  flex: 0 0 30%;
+  margin-left: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topics ul li:hover {
+  color: #666666;
+}
