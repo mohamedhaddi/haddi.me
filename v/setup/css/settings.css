@@ -16,8 +16,6 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
   width: 100vw;
   background: rgb(220,220,220);
   background: linear-gradient(180deg, rgba(220,220,220,1) 0%, rgba(255,255,255,1) 100%);
@@ -39,6 +37,12 @@ body {
 }
 */
 
+.note {
+  color: #777;
+  font-size: 0.7em;
+  font-style: italic;
+}
+
 .wrapper {
     margin: 0 10%;
     display: flex;
@@ -46,17 +50,21 @@ body {
     flex: 1;
 }
 
-.description {
+.header p {
   margin-bottom: 1em;
   color: #777;
 }
 
-.raw-input {
-  margin-top: 1em;
+.raw-input, .scored-output, .email, .password {
+  width: fit-content;
+}
+
+.raw-input, .email {
+  margin-top: 1em !important;
 }
 
 .scored-output {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .raw-input label {
@@ -65,6 +73,57 @@ body {
 
 .scored-output label {
     margin-right: 0.2em;
+}
+
+.title, .description, .image, .replace, .share, .email, .password {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.title label {
+  margin-right: 5em;
+}
+
+.description label {
+  margin-right: 1.4em;
+}
+
+.image label {
+  margin-right: 5em;
+}
+
+.share label {
+  margin-right: 0.8em;
+}
+
+.replace label {
+  margin-right: 3.8em;
+}
+
+.email label {
+  margin-right: 2.6em;
+}
+
+.password label {
+  margin-right: 0.8em;
+}
+
+.title input, .description input, .image input {
+  flex: 1;
+}
+
+.submit, .sign-in-btn, .sign-out-btn {
+  padding: 0.3em;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.submit, .sign-in-btn {
+  margin-top: 3em;
+}
+
+.sign-out-btn {
+  margin-top: 1em;
 }
 
 .visualizer {
@@ -109,6 +168,11 @@ body {
 
 .bold {
     font-weight: 700;
+}
+
+.underlined {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
 }
 
 .dotted-underline {

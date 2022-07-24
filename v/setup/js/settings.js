@@ -34,7 +34,6 @@ sign_in_btn.onclick = () => {
     .then((user_credential) => {
       // Signed in 
       const user = user_credential.user;
-      console.log(user)
     })
     .catch((error) => {
       // const error_code = error.code;
@@ -122,7 +121,7 @@ onAuthStateChanged(auth, (user) => {
 
         scored_output_div.appendChild(scored_output_label)
         scored_output_div.appendChild(scored_output)
-        raw_input_div.insertAdjacentHTML('afterEnd', scored_output_div.outerHTML)
+        raw_input_div.insertAdjacentElement('afterEnd', scored_output_div)
 
       }
 
@@ -160,6 +159,8 @@ onAuthStateChanged(auth, (user) => {
           raw_input_label.style.marginRight = "2em"
 
           scored_output_csv_string = csv_string.target.result
+
+          sign_out_btn.style.width = `${raw_input_div.offsetWidth}px`
 
           const title_label = document.createElement("label")
           title_label.htmlFor = "title"
@@ -221,16 +222,17 @@ onAuthStateChanged(auth, (user) => {
           */
 
           const submit_button = document.createElement("input")
-          submit_button.className = "submit"
+          submit_button.classList.add("submit")
+          submit_button.classList.add("bold")
           submit_button.style.width = `${raw_input_div.offsetWidth}px`
           submit_button.type = "submit"
           submit_button.value = "Submit"
 
-          wrapper.appendChild(title_div)
-          wrapper.appendChild(description_div)
-          wrapper.appendChild(image_div)
+          scored_output_div.insertAdjacentElement("afterEnd", title_div)
+          title_div.insertAdjacentElement("afterEnd", description_div)
+          description_div.insertAdjacentElement("afterEnd", image_div)
           // wrapper.appendChild(share_div)
-          wrapper.appendChild(submit_button)
+          image_div.insertAdjacentElement("afterEnd", submit_button)
 
           submit_button.addEventListener("click", () => {
 
@@ -283,7 +285,7 @@ onAuthStateChanged(auth, (user) => {
                     return;
                   }
                   else {
-                    window.location.href = `../v/?id=${response_data.name}`
+                    window.location.href = `../?id=${response_data.name}`
                   }
 
                 }).catch(error => {
@@ -321,6 +323,8 @@ onAuthStateChanged(auth, (user) => {
         });
       });
     }
+
+    sign_out_btn.style.width = `${raw_input_div.offsetWidth}px`
 
   } else {
 
