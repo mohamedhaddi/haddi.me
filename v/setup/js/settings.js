@@ -106,6 +106,8 @@ onAuthStateChanged(auth, (user) => {
 
         raw_input_csv_string = csv_string.target.result
 
+        sign_out_btn.style.marginTop = "1em"
+
         const scored_output_div = document.createElement('div')
         scored_output_div.className = "scored-output"
 
