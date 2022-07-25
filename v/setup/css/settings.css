@@ -75,30 +75,26 @@ body {
     margin-right: 0.2em;
 }
 
-.title, .description, .image, .replace, .share, .email, .password {
+.title, .description, .image, .replace, .share, .auto-delete, .email, .password {
   display: flex;
   align-items: center;
   margin-top: 0.5em;
 }
 
 .title label {
-  margin-right: 5em;
+  margin-right: 8em;
 }
 
 .description label {
-  margin-right: 1.4em;
+  margin-right: 4.4em;
 }
 
 .image label {
-  margin-right: 5em;
+  margin-right: 8em;
 }
 
-.share label {
+.auto-delete label {
   margin-right: 0.8em;
-}
-
-.replace label {
-  margin-right: 3.8em;
 }
 
 .email label {

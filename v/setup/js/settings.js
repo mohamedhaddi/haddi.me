@@ -207,21 +207,25 @@ onAuthStateChanged(auth, (user) => {
           image_div.appendChild(image_label)
           image_div.appendChild(image_input)
 
-          /*
-          const share_label = document.createElement("label")
-          share_label.htmlFor = "share"
-          share_label.innerHTML = "Share online:"
-          const share_input = document.createElement("input")
-          share_input.type = "checkbox"
-          share_input.name = "share"
-    
-          const share_div = document.createElement("div")
-          share_div.className = "share"
-          share_div.style.width = `${raw_input_div.offsetWidth}px`
-    
-          share_div.appendChild(share_label)
-          share_div.appendChild(share_input)
-          */
+          const auto_delete_label = document.createElement("label")
+          auto_delete_label.htmlFor = "auto-delete"
+          auto_delete_label.innerHTML = "Auto-delete after:"
+          const auto_delete_input = document.createElement("input")
+          auto_delete_input.type = "number"
+          auto_delete_input.name = "auto-delete"
+          auto_delete_input.value = 30;
+          auto_delete_input.min = 0;
+          const auto_delete_suffix = document.createElement("span")
+          auto_delete_suffix.innerHTML = "days."
+          auto_delete_suffix.style.marginLeft = "0.2em"
+
+          const auto_delete_div = document.createElement("div")
+          auto_delete_div.className = "auto-delete"
+          auto_delete_div.style.width = `${raw_input_div.offsetWidth}px`
+
+          auto_delete_div.appendChild(auto_delete_label)
+          auto_delete_div.appendChild(auto_delete_input)
+          auto_delete_div.appendChild(auto_delete_suffix)
 
           const submit_button = document.createElement("input")
           submit_button.classList.add("submit")
@@ -233,14 +237,14 @@ onAuthStateChanged(auth, (user) => {
           scored_output_div.insertAdjacentElement("afterEnd", title_div)
           title_div.insertAdjacentElement("afterEnd", description_div)
           description_div.insertAdjacentElement("afterEnd", image_div)
-          // wrapper.appendChild(share_div)
-          image_div.insertAdjacentElement("afterEnd", submit_button)
+          image_div.insertAdjacentElement("afterEnd", auto_delete_div)
+          auto_delete_div.insertAdjacentElement("afterEnd", submit_button)
 
           submit_button.addEventListener("click", () => {
 
             const submitted_title = document.querySelector(".title input").value
             const submitted_description = document.querySelector(".description input").value
-            // const share = document.querySelector(".share input").checked
+            const submitted_days = document.querySelector(".auto-delete input").value
 
             if (!submitted_title)
               alert("Please enter a title.")
@@ -248,6 +252,8 @@ onAuthStateChanged(auth, (user) => {
               alert("Please enter a description.")
             else if (!image_input.value)
               alert("Please upload your desired image.")
+            else if (!submitted_days || submitted_days < 0)
+              alert("Please enter a positive value for auto-delete.")
             else {
 
               const image_input = document.querySelector(".image input")
@@ -264,6 +270,7 @@ onAuthStateChanged(auth, (user) => {
                   image_base64: submitted_image,
                   raw_input: JSON.stringify(CSVJSON.csv2json(raw_input_csv_string)),
                   scored_output: JSON.stringify(CSVJSON.csv2json(scored_output_csv_string)),
+                  auto_delete_day: Date.now() + (submitted_days * 24 * 60 * 60 * 1000)
                 }
 
                 const options = {
