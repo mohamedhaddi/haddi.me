@@ -84,7 +84,7 @@ onAuthStateChanged(auth, (user) => {
 
     raw_input.onchange = (csv_path) => {
       const [file] = csv_path.target.files
-      raw_input_file_reader.readAsBinaryString(file)
+      raw_input_file_reader.readAsText(file)
     }
 
     // Read uploaded "raw input" file
@@ -139,7 +139,7 @@ onAuthStateChanged(auth, (user) => {
 
       scored_output.onchange = (csv_path) => {
         const [file] = csv_path.target.files
-        scored_outpout_file_reader.readAsBinaryString(file)
+        scored_outpout_file_reader.readAsText(file)
       }
 
       // Read uploaded "scored output" file
