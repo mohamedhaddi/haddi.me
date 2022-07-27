@@ -57,7 +57,7 @@ async function getData() {
   parsed_raw_input.forEach(input => {
 
     const id_div = document.createElement('div')
-    id_div.id = input["Doc #"]
+    id_div.id = input[Object.keys(parsed_raw_input[0])[0]]
     id_div.style.position = "relative"
 
     const doc_div = document.createElement('div')
@@ -66,7 +66,7 @@ async function getData() {
 
     const doc_id_span = document.createElement('span')
     doc_id_span.style.position = "absolute";
-    doc_id_span.innerHTML = input["Doc #"]
+    doc_id_span.innerHTML = input[Object.keys(parsed_raw_input[0])[0]]
     doc_id_span.style.top = "0"
     doc_id_span.style.left = "-1.5em"
     doc_id_span.style.color = "#ccc"
@@ -86,7 +86,7 @@ async function getData() {
   for (let i = 0; i < id_divs.length; i++) {
 
     // get all phrases of document number `id_divs[i].id`
-    const all_current_doc_phrases = parsed_scored_output.filter(object => object["Document ID"] === id_divs[i].id)
+    const all_current_doc_phrases = parsed_scored_output.filter(object => object[Object.keys(parsed_scored_output[0])[0]] === id_divs[i].id)
 
     // filter only relevant information for each phrase of the document
     let current_doc_filtered_phrases = []
