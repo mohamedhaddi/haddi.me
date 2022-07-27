@@ -91,7 +91,7 @@ onAuthStateChanged(auth, (user) => {
 
     raw_input_file_reader.onload = (csv_string) => {
 
-      if (csv_string.target.result.split(",")[0] != "Doc #") {
+      if (!csv_string.target.result.split(",")[0].includes("Doc #")) {
 
         alert("Please insert the raw input CSV file first.")
         raw_input.value = ""
@@ -146,7 +146,7 @@ onAuthStateChanged(auth, (user) => {
 
       scored_outpout_file_reader.onload = (csv_string) => {
 
-        if (csv_string.target.result.split(",")[0] == "Doc #") {
+        if (csv_string.target.result.split(",")[0].includes("Doc #")) {
 
           alert("Please insert the scored output CSV file.")
           scored_output.value = ""
