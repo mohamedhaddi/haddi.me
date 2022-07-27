@@ -26,6 +26,16 @@ body {
   position: relative;
 }
 
+.info {
+  flex: 1;
+}
+
+.image {
+  flex: 0 0 30%;
+  text-align: right;
+  margin-left: 1em;
+}
+
 /*
 .header::after {
     content: "";
