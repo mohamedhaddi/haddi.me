@@ -106,7 +106,7 @@ onAuthStateChanged(auth, (user) => {
 
         raw_input_csv_string = csv_string.target.result
 
-        sign_out_btn.style.marginTop = "1em"
+        sign_out_btn.style.marginTop = "0.5em"
 
         const scored_output_div = document.createElement('div')
         scored_output_div.className = "scored-output"
@@ -162,7 +162,7 @@ onAuthStateChanged(auth, (user) => {
 
           scored_output_csv_string = csv_string.target.result
 
-          sign_out_btn.style.width = `${raw_input_div.offsetWidth}px`
+          sign_out_btn.style.maxWidth = `${raw_input_div.offsetWidth}px`
 
           const title_label = document.createElement("label")
           title_label.htmlFor = "title"
@@ -173,7 +173,7 @@ onAuthStateChanged(auth, (user) => {
 
           const title_div = document.createElement("div")
           title_div.className = "title"
-          title_div.style.width = `${raw_input_div.offsetWidth}px`
+          title_div.style.maxWidth = `${raw_input_div.offsetWidth}px`
 
           title_div.appendChild(title_label)
           title_div.appendChild(title_input)
@@ -187,7 +187,7 @@ onAuthStateChanged(auth, (user) => {
 
           const description_div = document.createElement("div")
           description_div.className = "description"
-          description_div.style.width = `${raw_input_div.offsetWidth}px`
+          description_div.style.maxWidth = `${raw_input_div.offsetWidth}px`
 
           description_div.appendChild(description_label)
           description_div.appendChild(description_input)
@@ -202,7 +202,7 @@ onAuthStateChanged(auth, (user) => {
 
           const image_div = document.createElement("div")
           image_div.className = "image"
-          image_div.style.width = `${raw_input_div.offsetWidth}px`
+          image_div.style.maxWidth = `${raw_input_div.offsetWidth}px`
 
           image_div.appendChild(image_label)
           image_div.appendChild(image_input)
@@ -221,7 +221,7 @@ onAuthStateChanged(auth, (user) => {
 
           const auto_delete_div = document.createElement("div")
           auto_delete_div.className = "auto-delete"
-          auto_delete_div.style.width = `${raw_input_div.offsetWidth}px`
+          auto_delete_div.style.maxWidth = `${raw_input_div.offsetWidth}px`
 
           auto_delete_div.appendChild(auto_delete_label)
           auto_delete_div.appendChild(auto_delete_input)
@@ -230,7 +230,7 @@ onAuthStateChanged(auth, (user) => {
           const submit_button = document.createElement("input")
           submit_button.classList.add("submit")
           submit_button.classList.add("bold")
-          submit_button.style.width = `${raw_input_div.offsetWidth}px`
+          submit_button.style.maxWidth = `${raw_input_div.offsetWidth}px`
           submit_button.type = "submit"
           submit_button.value = "Submit"
 
@@ -337,14 +337,14 @@ onAuthStateChanged(auth, (user) => {
       });
     }
 
-    sign_out_btn.style.width = `${raw_input_div.offsetWidth}px`
+    sign_out_btn.style.maxWidth = `${raw_input_div.offsetWidth}px`
 
   } else {
 
     signed_in.hidden = true;
     signed_out.hidden = false;
 
-    sign_in_btn.style.width = `${document.querySelector('.email').offsetWidth}px`
+    sign_in_btn.style.maxWidth = `${document.querySelector('.email').offsetWidth}px`
 
   }
 });

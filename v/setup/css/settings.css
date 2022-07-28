@@ -24,6 +24,10 @@ body {
   position: relative;
 }
 
+.header h1 {
+  margin-bottom: 0.3em;
+}
+
 /*
 .header::after {
     content: "";
@@ -95,6 +99,11 @@ body {
 
 .auto-delete label {
   margin-right: 0.8em;
+  min-width: fit-content;
+}
+
+.auto-delete input {
+  min-width: 3em;
 }
 
 .email label {
@@ -120,6 +129,7 @@ body {
 
 .sign-out-btn {
   margin-top: 3.5em;
+  font-size: 0.7em;
 }
 
 .visualizer {
@@ -203,4 +213,68 @@ ul {
 
 .topics ul li:hover {
   color: #666666;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 900px)
+{
+  h1 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  label {
+    font-size: 0.8em;
+  }
+  input {
+    font-size: 0.8em;
+  }
+  .sign-out-btn {
+    font-size: 0.7em;
+  }
+  .raw-input {
+    margin-bottom: 0.3em;
+  }
+  .auto-delete span {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 420px)
+{
+  h1 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 0.7em;
+  }
+  label {
+    font-size: 0.7em;
+  }
+  input {
+    font-size: 0.7em;
+  }
+  .sign-in-btn, .sign-out-btn {
+    font-size: 0.6em;
+  }
+  .raw-input {
+    margin-bottom: 0.3em;
+  }
+  .auto-delete span {
+    font-size: 0.7em;
+  }
+  .title, .description, .image, .replace, .share, .auto-delete, .email, .password {
+    margin-top: 0.3em;
+  }
+  .header {
+    padding: 3% 5% 1% 5%;
+  }
+  .header h1 {
+    margin-bottom: 0.5em;
+  }
+  .wrapper {
+    margin: 0 5%;
+  }
 }

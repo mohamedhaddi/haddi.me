@@ -55,12 +55,11 @@ async function getData() {
   const description_div = header.querySelector('.description')
   description_div.innerText = description;
 
-  const image_container = header.querySelector('.image');
-  image_container.style.height = `${header.offsetHeight}px`;
-
   const image_element = document.createElement("img");
   image_element.src = image;
-  image_element.style.height = "100%";
+  image_element.style.maxHeight = `${header.offsetHeight}px`;
+
+  const image_container = header.querySelector('.image');
   image_container.appendChild(image_element);
 
   visualizer.innerHTML = ""
