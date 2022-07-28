@@ -58,6 +58,7 @@ async function getData() {
   const image_element = document.createElement("img");
   image_element.src = image;
   image_element.style.maxHeight = `${header.offsetHeight}px`;
+  image_element.style.maxWidth = `100%`;
 
   const image_container = header.querySelector('.image');
   image_container.appendChild(image_element);
@@ -76,7 +77,7 @@ async function getData() {
 
     const doc_div = document.createElement('div')
     doc_div.className = "document"
-    doc_div.innerText = input["Document"]
+    doc_div.innerHTML = `<p>${input["Document"]}</p>`
 
     const doc_id_span = document.createElement('span')
     doc_id_span.style.position = "absolute";
