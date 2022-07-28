@@ -256,6 +256,8 @@ onAuthStateChanged(auth, (user) => {
               alert("Please enter a positive value for auto-delete.")
             else {
 
+              submit_button.disabled = true
+
               const image_input = document.querySelector(".image input")
               const image_input_file = image_input.files[0]
 
@@ -290,6 +292,7 @@ onAuthStateChanged(auth, (user) => {
                   const response_data = await response.json();
 
                   if (response_data.error) {
+                    submit_button.disabled = false
                     alert("Error: " + response_data.error);
                     return;
                   }
@@ -298,6 +301,7 @@ onAuthStateChanged(auth, (user) => {
                   }
 
                 }).catch(error => {
+                  submit_button.disabled = false
                   alert(error);
                 });
 

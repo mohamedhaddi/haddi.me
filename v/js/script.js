@@ -1,3 +1,8 @@
+// Get loading element
+const loading_element = document.querySelector(".loading-wrap")
+// Get "page not found" element
+const page_not_found = document.querySelector(".page-not-found");
+
 getData();
 
 const toggleBold = selector => selector.classList.toggle('bold');
@@ -10,11 +15,21 @@ async function getData() {
 
   let data;
 
+  const visualizer = document.querySelector('.visualizer')
+
   try {
     var url = new URL(window.location.href);
     var id = url.searchParams.get("id");
+    if (id) {
+      loading_element.style.display = "block";
+      page_not_found.style.display = "none";
+    }
     const response = await fetch(`https://veritasnlp-default-rtdb.firebaseio.com/results/${id}.json`);
     data = await response.json();
+    if (!data) {
+      page_not_found.style.display = "block";
+      loading_element.style.display = "none";
+    }
   } catch (error) {
     console.log("Error: " + error)
     return;
@@ -47,8 +62,6 @@ async function getData() {
   image_element.src = image;
   image_element.style.height = "100%";
   image_container.appendChild(image_element);
-
-  const visualizer = document.querySelector('.visualizer')
 
   visualizer.innerHTML = ""
   visualizer.style.backgroundColor = "initial"
