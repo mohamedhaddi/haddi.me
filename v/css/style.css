@@ -21,7 +21,6 @@ body {
   width: 100vw;
   background: rgb(220,220,220);
   background: linear-gradient(180deg, rgba(220,220,220,1) 0%, rgba(255,255,255,1) 100%);
-  /* padding: 2% 10% 1% 10%; */
   padding: 3% 10% 1% 10%;
   position: relative;
 }
@@ -39,19 +38,6 @@ body {
   text-align: right;
   margin-left: 1em;
 }
-
-/*
-.header::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: #ddd;
-    top: 100%;
-    width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-*/
 
 .wrapper {
     margin: 0 10%;
