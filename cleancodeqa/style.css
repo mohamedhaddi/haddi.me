@@ -37,7 +37,7 @@ pre {
     background-color: #00000017;
     padding: 21px;
     border-radius: 5px;
-    font-size: 1.06rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     max-width: 100%;
     overflow: auto;
@@ -62,7 +62,7 @@ blockquote {
 }
 .wrapper {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1080px;
     padding: 20px;
 }
 #chat {
@@ -79,7 +79,7 @@ blockquote {
     padding: 15px 30px;
     margin-bottom: 30px;
     border-radius: 8px;
-    font-size: 1.063rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     border: 1px solid #8c8c8cb3;
     box-shadow: 0 0 200px 0px #00000030;
@@ -110,7 +110,10 @@ blockquote {
     }
     .bubble {
         margin-bottom: 20px;
-        font-size: 1rem;
+        font-size: 1.1rem;
         width: 100%;
+    }
+    pre {
+        font-size: 1.1rem;
     }
 }
