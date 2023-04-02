@@ -99,6 +99,11 @@ blockquote {
     color: #000000c4;
     align-self: flex-end;
 }
+.error {
+    background-color: #d9c8c8;
+    color: #000000e0;
+    align-self: flex-start;
+}
 #chat > p:nth-child(1) > strong {
     text-transform: uppercase;
 }
